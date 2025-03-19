@@ -2,12 +2,12 @@
 # A KEM object is created with a specific algorithm, its operations could use 
 # either its attached key-pair, or the ones temprarily entered by the user.
 from binascii import hexlify
-from pqmagic import KEM
+from pqmagic import Kem
 
 def example_kem(): # Example of Key Encapsulation Mechanism
 
     # taking ML_KEM_512 as an example
-    kem = KEM("ML_KEM_512")
+    kem = Kem("ML_KEM_512")
 
     # generate key pair (or update the object's attached key pair)
     pk, sk = kem.keypair()
@@ -15,12 +15,12 @@ def example_kem(): # Example of Key Encapsulation Mechanism
     print("Secret Key:", hexlify(sk))
 
     # encapsulation
-    ciphertext, shared_secret_enc = kem.encaps() # or kem.encaps(user_pk)
+    ciphertext, shared_secret_enc = kem.encaps(pk) # or kem.encaps()
     print("Ciphertext:", hexlify(ciphertext))
     print("Shared Secret (Encapsulation):", hexlify(shared_secret_enc))
 
     # decapsulation
-    shared_secret_dec = kem.decaps(ciphertext) # or kem.decaps(ciphertext, user_sk)
+    shared_secret_dec = kem.decaps(ciphertext, sk) # or kem.decaps(ciphertext)
     print("Shared Secret (Decapsulation):", hexlify(shared_secret_dec))
 
     # verify the shared secret
@@ -32,9 +32,4 @@ def example_kem(): # Example of Key Encapsulation Mechanism
 if __name__ == "__main__":
     print("=== Key Encapsulation Mechanism Example ===")
     example_kem()
-
-
-
-
-
 

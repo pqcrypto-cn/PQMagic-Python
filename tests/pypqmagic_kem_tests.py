@@ -1,6 +1,6 @@
 import unittest
 from binascii import hexlify
-from pqmagic import KEM, PQMAGIC_SUCCESS, PQMAGIC_FAILURE
+from pqmagic import Kem, PQMAGIC_SUCCESS, PQMAGIC_FAILURE
 
 class TestKEM(unittest.TestCase):
     def setUp(self):
@@ -13,15 +13,15 @@ class TestKEM(unittest.TestCase):
     def test_encaps_decaps(self):
         for alg in self.kem_algorithms:
             with self.subTest(algorithm = alg):
-                kem = KEM(alg)
+                kem = Kem(alg)
                 pk, sk = kem.keypair()
                 #print('pk:', hexlify(pk))
                 #print('sk:', hexlify(sk))
-                ciphertext = kem.encaps()
+                ciphertext, shared_secret1 = kem.encaps()
                 #print('ciphertext:', hexlify(ciphertext))
-                shared_secret = kem.decaps(ciphertext)
+                shared_secret2 = kem.decaps(ciphertext)
                 #print('shared_secret:', hexlify(shared_secret))
-                self.assertEqual(len(shared_secret), kem.shared_secret_size)
+                self.assertEqual(shared_secret1, shared_secret2)
 
 
 if __name__ == '__main__':

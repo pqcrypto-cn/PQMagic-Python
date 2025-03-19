@@ -1512,8 +1512,8 @@ static const char *__pyx_f[] = {
 /* #### Code section: type_declarations ### */
 
 /*--- Type declarations ---*/
-struct __pyx_obj_7pqmagic_SIG;
-struct __pyx_obj_7pqmagic_KEM;
+struct __pyx_obj_7pqmagic_Sig;
+struct __pyx_obj_7pqmagic_Kem;
 
 /* "pqmagic.pyx":9
  * from libc.stddef cimport size_t
@@ -1585,11 +1585,11 @@ enum __pyx_t_7pqmagic_kem_label {
 /* "pqmagic.pyx":118
  * 
  * 
- * cdef class SIG:             # <<<<<<<<<<<<<<
+ * cdef class Sig:             # <<<<<<<<<<<<<<
  *     cdef public sig_label label
  *     cdef unsigned char *pk
  */
-struct __pyx_obj_7pqmagic_SIG {
+struct __pyx_obj_7pqmagic_Sig {
   PyObject_HEAD
   enum __pyx_t_7pqmagic_sig_label label;
   unsigned char *pk;
@@ -1603,11 +1603,11 @@ struct __pyx_obj_7pqmagic_SIG {
 /* "pqmagic.pyx":770
  *             free(self.sk)
  * 
- * cdef class KEM:             # <<<<<<<<<<<<<<
+ * cdef class Kem:             # <<<<<<<<<<<<<<
  *     cdef public kem_label label
  *     cdef unsigned char *pk
  */
-struct __pyx_obj_7pqmagic_KEM {
+struct __pyx_obj_7pqmagic_Kem {
   PyObject_HEAD
   enum __pyx_t_7pqmagic_kem_label label;
   unsigned char *pk;
@@ -2341,8 +2341,8 @@ static const char __pyx_k_pk[] = "pk";
 static const char __pyx_k_sk[] = "sk";
 static const char __pyx_k_sm[] = "sm";
 static const char __pyx_k_ss[] = "ss";
-static const char __pyx_k_KEM[] = "KEM";
-static const char __pyx_k_SIG[] = "SIG";
+static const char __pyx_k_Kem[] = "Kem";
+static const char __pyx_k_Sig[] = "Sig";
 static const char __pyx_k__29[] = "?";
 static const char __pyx_k_ctx[] = "ctx";
 static const char __pyx_k_sig[] = "sig";
@@ -2374,8 +2374,8 @@ static const char __pyx_k_disable[] = "disable";
 static const char __pyx_k_keypair[] = "keypair";
 static const char __pyx_k_pqmagic[] = "pqmagic";
 static const char __pyx_k_sig_ptr[] = "sig_ptr";
-static const char __pyx_k_SIG_open[] = "SIG.open";
-static const char __pyx_k_SIG_sign[] = "SIG.sign";
+static const char __pyx_k_Sig_open[] = "Sig.open";
+static const char __pyx_k_Sig_sign[] = "Sig.sign";
 static const char __pyx_k_getstate[] = "__getstate__";
 static const char __pyx_k_setstate[] = "__setstate__";
 static const char __pyx_k_KYBER_512[] = "KYBER_512";
@@ -2388,12 +2388,12 @@ static const char __pyx_k_isenabled[] = "isenabled";
 static const char __pyx_k_pyx_state[] = "__pyx_state";
 static const char __pyx_k_reduce_ex[] = "__reduce_ex__";
 static const char __pyx_k_sign_pack[] = "sign_pack";
-static const char __pyx_k_KEM_decaps[] = "KEM.decaps";
-static const char __pyx_k_KEM_encaps[] = "KEM.encaps";
 static const char __pyx_k_KYBER_1024[] = "KYBER_1024";
+static const char __pyx_k_Kem_decaps[] = "Kem.decaps";
+static const char __pyx_k_Kem_encaps[] = "Kem.encaps";
 static const char __pyx_k_ML_KEM_512[] = "ML_KEM_512";
 static const char __pyx_k_ML_KEM_768[] = "ML_KEM_768";
-static const char __pyx_k_SIG_verify[] = "SIG.verify";
+static const char __pyx_k_Sig_verify[] = "Sig.verify";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_AIGIS_ENC_1[] = "AIGIS_ENC_1";
 static const char __pyx_k_AIGIS_ENC_2[] = "AIGIS_ENC_2";
@@ -2405,13 +2405,13 @@ static const char __pyx_k_AIGIS_SIG_3[] = "AIGIS_SIG_3";
 static const char __pyx_k_DILITHIUM_2[] = "DILITHIUM_2";
 static const char __pyx_k_DILITHIUM_3[] = "DILITHIUM_3";
 static const char __pyx_k_DILITHIUM_5[] = "DILITHIUM_5";
-static const char __pyx_k_KEM_keypair[] = "KEM.keypair";
+static const char __pyx_k_Kem_keypair[] = "Kem.keypair";
 static const char __pyx_k_ML_KEM_1024[] = "ML_KEM_1024";
-static const char __pyx_k_SIG_keypair[] = "SIG.keypair";
+static const char __pyx_k_Sig_keypair[] = "Sig.keypair";
 static const char __pyx_k_pqmagic_pyx[] = "pqmagic.pyx";
 static const char __pyx_k_is_coroutine[] = "_is_coroutine";
 static const char __pyx_k_stringsource[] = "<stringsource>";
-static const char __pyx_k_SIG_sign_pack[] = "SIG.sign_pack";
+static const char __pyx_k_Sig_sign_pack[] = "Sig.sign_pack";
 static const char __pyx_k_reduce_cython[] = "__reduce_cython__";
 static const char __pyx_k_AssertionError[] = "AssertionError";
 static const char __pyx_k_Invalid_length[] = "Invalid length!";
@@ -2437,10 +2437,10 @@ static const char __pyx_k_SLH_DSA_SHAKE_256f[] = "SLH_DSA_SHAKE_256f";
 static const char __pyx_k_SLH_DSA_SHAKE_256s[] = "SLH_DSA_SHAKE_256s";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
-static const char __pyx_k_KEM___reduce_cython[] = "KEM.__reduce_cython__";
-static const char __pyx_k_SIG___reduce_cython[] = "SIG.__reduce_cython__";
-static const char __pyx_k_KEM___setstate_cython[] = "KEM.__setstate_cython__";
-static const char __pyx_k_SIG___setstate_cython[] = "SIG.__setstate_cython__";
+static const char __pyx_k_Kem___reduce_cython[] = "Kem.__reduce_cython__";
+static const char __pyx_k_Sig___reduce_cython[] = "Sig.__reduce_cython__";
+static const char __pyx_k_Kem___setstate_cython[] = "Kem.__setstate_cython__";
+static const char __pyx_k_Sig___setstate_cython[] = "Sig.__setstate_cython__";
 static const char __pyx_k_Invalid_algorithm_name[] = "Invalid algorithm name.";
 static const char __pyx_k_SPHINCS_Alpha_SM3_128f[] = "SPHINCS_Alpha_SM3_128f";
 static const char __pyx_k_SPHINCS_Alpha_SM3_128s[] = "SPHINCS_Alpha_SM3_128s";
@@ -2458,42 +2458,42 @@ static const char __pyx_k_SPHINCS_Alpha_SHAKE_256f[] = "SPHINCS_Alpha_SHAKE_256f
 static const char __pyx_k_SPHINCS_Alpha_SHAKE_256s[] = "SPHINCS_Alpha_SHAKE_256s";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 /* #### Code section: decls ### */
-static int __pyx_pf_7pqmagic_3SIG___cinit__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_2keypair(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_4sign(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_sk); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_6verify(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_sig, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_pk); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_8sign_pack(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_sk); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_10open(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_sm, PyObject *__pyx_v_ctx, PyObject *__pyx_v_pk); /* proto */
-static void __pyx_pf_7pqmagic_3SIG_12__dealloc__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_5label___get__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self); /* proto */
-static int __pyx_pf_7pqmagic_3SIG_5label_2__set__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_15public_key_size___get__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self); /* proto */
-static int __pyx_pf_7pqmagic_3SIG_15public_key_size_2__set__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_15secret_key_size___get__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self); /* proto */
-static int __pyx_pf_7pqmagic_3SIG_15secret_key_size_2__set__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_14signature_size___get__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self); /* proto */
-static int __pyx_pf_7pqmagic_3SIG_14signature_size_2__set__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_14__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_SIG *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3SIG_16__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
-static int __pyx_pf_7pqmagic_3KEM___cinit__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_2keypair(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_4encaps(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_pk); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_6decaps(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_ct, PyObject *__pyx_v_sk); /* proto */
-static void __pyx_pf_7pqmagic_3KEM_8__dealloc__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_5label___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self); /* proto */
-static int __pyx_pf_7pqmagic_3KEM_5label_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_15public_key_size___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self); /* proto */
-static int __pyx_pf_7pqmagic_3KEM_15public_key_size_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_15secret_key_size___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self); /* proto */
-static int __pyx_pf_7pqmagic_3KEM_15secret_key_size_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_15ciphertext_size___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self); /* proto */
-static int __pyx_pf_7pqmagic_3KEM_15ciphertext_size_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_18shared_secret_size___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self); /* proto */
-static int __pyx_pf_7pqmagic_3KEM_18shared_secret_size_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_10__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_KEM *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_7pqmagic_3KEM_12__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_tp_new_7pqmagic_SIG(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_7pqmagic_KEM(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static int __pyx_pf_7pqmagic_3Sig___cinit__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_2keypair(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_4sign(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_sk); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_6verify(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_sig, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_pk); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_8sign_pack(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_sk); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_10open(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_sm, PyObject *__pyx_v_ctx, PyObject *__pyx_v_pk); /* proto */
+static void __pyx_pf_7pqmagic_3Sig_12__dealloc__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_5label___get__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self); /* proto */
+static int __pyx_pf_7pqmagic_3Sig_5label_2__set__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_15public_key_size___get__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self); /* proto */
+static int __pyx_pf_7pqmagic_3Sig_15public_key_size_2__set__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_15secret_key_size___get__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self); /* proto */
+static int __pyx_pf_7pqmagic_3Sig_15secret_key_size_2__set__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_14signature_size___get__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self); /* proto */
+static int __pyx_pf_7pqmagic_3Sig_14signature_size_2__set__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_14__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_Sig *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Sig_16__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static int __pyx_pf_7pqmagic_3Kem___cinit__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_2keypair(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_4encaps(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_pk); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_6decaps(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_ct, PyObject *__pyx_v_sk); /* proto */
+static void __pyx_pf_7pqmagic_3Kem_8__dealloc__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_5label___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self); /* proto */
+static int __pyx_pf_7pqmagic_3Kem_5label_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_15public_key_size___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self); /* proto */
+static int __pyx_pf_7pqmagic_3Kem_15public_key_size_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_15secret_key_size___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self); /* proto */
+static int __pyx_pf_7pqmagic_3Kem_15secret_key_size_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_15ciphertext_size___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self); /* proto */
+static int __pyx_pf_7pqmagic_3Kem_15ciphertext_size_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_18shared_secret_size___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self); /* proto */
+static int __pyx_pf_7pqmagic_3Kem_18shared_secret_size_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_10__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_Kem *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_7pqmagic_3Kem_12__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_tp_new_7pqmagic_Sig(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_7pqmagic_Kem(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
 typedef struct {
@@ -2530,11 +2530,11 @@ typedef struct {
   #if CYTHON_USE_MODULE_STATE
   #endif
   #if CYTHON_USE_MODULE_STATE
-  PyObject *__pyx_type_7pqmagic_SIG;
-  PyObject *__pyx_type_7pqmagic_KEM;
+  PyObject *__pyx_type_7pqmagic_Sig;
+  PyObject *__pyx_type_7pqmagic_Kem;
   #endif
-  PyTypeObject *__pyx_ptype_7pqmagic_SIG;
-  PyTypeObject *__pyx_ptype_7pqmagic_KEM;
+  PyTypeObject *__pyx_ptype_7pqmagic_Sig;
+  PyTypeObject *__pyx_ptype_7pqmagic_Kem;
   PyObject *__pyx_n_s_AIGIS_ENC_1;
   PyObject *__pyx_n_s_AIGIS_ENC_2;
   PyObject *__pyx_n_s_AIGIS_ENC_3;
@@ -2551,15 +2551,15 @@ typedef struct {
   PyObject *__pyx_kp_s_Invalid_length;
   PyObject *__pyx_kp_s_Invalid_pk_length;
   PyObject *__pyx_kp_s_Invalid_sk_length;
-  PyObject *__pyx_n_s_KEM;
-  PyObject *__pyx_n_s_KEM___reduce_cython;
-  PyObject *__pyx_n_s_KEM___setstate_cython;
-  PyObject *__pyx_n_s_KEM_decaps;
-  PyObject *__pyx_n_s_KEM_encaps;
-  PyObject *__pyx_n_s_KEM_keypair;
   PyObject *__pyx_n_s_KYBER_1024;
   PyObject *__pyx_n_s_KYBER_512;
   PyObject *__pyx_n_s_KYBER_768;
+  PyObject *__pyx_n_s_Kem;
+  PyObject *__pyx_n_s_Kem___reduce_cython;
+  PyObject *__pyx_n_s_Kem___setstate_cython;
+  PyObject *__pyx_n_s_Kem_decaps;
+  PyObject *__pyx_n_s_Kem_encaps;
+  PyObject *__pyx_n_s_Kem_keypair;
   PyObject *__pyx_n_s_ML_DSA_44;
   PyObject *__pyx_n_s_ML_DSA_65;
   PyObject *__pyx_n_s_ML_DSA_87;
@@ -2568,14 +2568,6 @@ typedef struct {
   PyObject *__pyx_n_s_ML_KEM_768;
   PyObject *__pyx_n_s_PQMAGIC_FAILURE;
   PyObject *__pyx_n_s_PQMAGIC_SUCCESS;
-  PyObject *__pyx_n_s_SIG;
-  PyObject *__pyx_n_s_SIG___reduce_cython;
-  PyObject *__pyx_n_s_SIG___setstate_cython;
-  PyObject *__pyx_n_s_SIG_keypair;
-  PyObject *__pyx_n_s_SIG_open;
-  PyObject *__pyx_n_s_SIG_sign;
-  PyObject *__pyx_n_s_SIG_sign_pack;
-  PyObject *__pyx_n_s_SIG_verify;
   PyObject *__pyx_n_s_SLH_DSA_SHA2_128f;
   PyObject *__pyx_n_s_SLH_DSA_SHA2_128s;
   PyObject *__pyx_n_s_SLH_DSA_SHA2_192f;
@@ -2604,6 +2596,14 @@ typedef struct {
   PyObject *__pyx_n_s_SPHINCS_Alpha_SHAKE_256s;
   PyObject *__pyx_n_s_SPHINCS_Alpha_SM3_128f;
   PyObject *__pyx_n_s_SPHINCS_Alpha_SM3_128s;
+  PyObject *__pyx_n_s_Sig;
+  PyObject *__pyx_n_s_Sig___reduce_cython;
+  PyObject *__pyx_n_s_Sig___setstate_cython;
+  PyObject *__pyx_n_s_Sig_keypair;
+  PyObject *__pyx_n_s_Sig_open;
+  PyObject *__pyx_n_s_Sig_sign;
+  PyObject *__pyx_n_s_Sig_sign_pack;
+  PyObject *__pyx_n_s_Sig_verify;
   PyObject *__pyx_n_s_TypeError;
   PyObject *__pyx_n_s_ValueError;
   PyObject *__pyx_kp_b__2;
@@ -2730,10 +2730,10 @@ static int __pyx_m_clear(PyObject *m) {
   #ifdef __Pyx_FusedFunction_USED
   Py_CLEAR(clear_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_CLEAR(clear_module_state->__pyx_ptype_7pqmagic_SIG);
-  Py_CLEAR(clear_module_state->__pyx_type_7pqmagic_SIG);
-  Py_CLEAR(clear_module_state->__pyx_ptype_7pqmagic_KEM);
-  Py_CLEAR(clear_module_state->__pyx_type_7pqmagic_KEM);
+  Py_CLEAR(clear_module_state->__pyx_ptype_7pqmagic_Sig);
+  Py_CLEAR(clear_module_state->__pyx_type_7pqmagic_Sig);
+  Py_CLEAR(clear_module_state->__pyx_ptype_7pqmagic_Kem);
+  Py_CLEAR(clear_module_state->__pyx_type_7pqmagic_Kem);
   Py_CLEAR(clear_module_state->__pyx_n_s_AIGIS_ENC_1);
   Py_CLEAR(clear_module_state->__pyx_n_s_AIGIS_ENC_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_AIGIS_ENC_3);
@@ -2750,15 +2750,15 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_s_Invalid_length);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Invalid_pk_length);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Invalid_sk_length);
-  Py_CLEAR(clear_module_state->__pyx_n_s_KEM);
-  Py_CLEAR(clear_module_state->__pyx_n_s_KEM___reduce_cython);
-  Py_CLEAR(clear_module_state->__pyx_n_s_KEM___setstate_cython);
-  Py_CLEAR(clear_module_state->__pyx_n_s_KEM_decaps);
-  Py_CLEAR(clear_module_state->__pyx_n_s_KEM_encaps);
-  Py_CLEAR(clear_module_state->__pyx_n_s_KEM_keypair);
   Py_CLEAR(clear_module_state->__pyx_n_s_KYBER_1024);
   Py_CLEAR(clear_module_state->__pyx_n_s_KYBER_512);
   Py_CLEAR(clear_module_state->__pyx_n_s_KYBER_768);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Kem);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Kem___reduce_cython);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Kem___setstate_cython);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Kem_decaps);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Kem_encaps);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Kem_keypair);
   Py_CLEAR(clear_module_state->__pyx_n_s_ML_DSA_44);
   Py_CLEAR(clear_module_state->__pyx_n_s_ML_DSA_65);
   Py_CLEAR(clear_module_state->__pyx_n_s_ML_DSA_87);
@@ -2767,14 +2767,6 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_ML_KEM_768);
   Py_CLEAR(clear_module_state->__pyx_n_s_PQMAGIC_FAILURE);
   Py_CLEAR(clear_module_state->__pyx_n_s_PQMAGIC_SUCCESS);
-  Py_CLEAR(clear_module_state->__pyx_n_s_SIG);
-  Py_CLEAR(clear_module_state->__pyx_n_s_SIG___reduce_cython);
-  Py_CLEAR(clear_module_state->__pyx_n_s_SIG___setstate_cython);
-  Py_CLEAR(clear_module_state->__pyx_n_s_SIG_keypair);
-  Py_CLEAR(clear_module_state->__pyx_n_s_SIG_open);
-  Py_CLEAR(clear_module_state->__pyx_n_s_SIG_sign);
-  Py_CLEAR(clear_module_state->__pyx_n_s_SIG_sign_pack);
-  Py_CLEAR(clear_module_state->__pyx_n_s_SIG_verify);
   Py_CLEAR(clear_module_state->__pyx_n_s_SLH_DSA_SHA2_128f);
   Py_CLEAR(clear_module_state->__pyx_n_s_SLH_DSA_SHA2_128s);
   Py_CLEAR(clear_module_state->__pyx_n_s_SLH_DSA_SHA2_192f);
@@ -2803,6 +2795,14 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_SPHINCS_Alpha_SHAKE_256s);
   Py_CLEAR(clear_module_state->__pyx_n_s_SPHINCS_Alpha_SM3_128f);
   Py_CLEAR(clear_module_state->__pyx_n_s_SPHINCS_Alpha_SM3_128s);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Sig);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Sig___reduce_cython);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Sig___setstate_cython);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Sig_keypair);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Sig_open);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Sig_sign);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Sig_sign_pack);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Sig_verify);
   Py_CLEAR(clear_module_state->__pyx_n_s_TypeError);
   Py_CLEAR(clear_module_state->__pyx_n_s_ValueError);
   Py_CLEAR(clear_module_state->__pyx_kp_b__2);
@@ -2907,10 +2907,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   #ifdef __Pyx_FusedFunction_USED
   Py_VISIT(traverse_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_VISIT(traverse_module_state->__pyx_ptype_7pqmagic_SIG);
-  Py_VISIT(traverse_module_state->__pyx_type_7pqmagic_SIG);
-  Py_VISIT(traverse_module_state->__pyx_ptype_7pqmagic_KEM);
-  Py_VISIT(traverse_module_state->__pyx_type_7pqmagic_KEM);
+  Py_VISIT(traverse_module_state->__pyx_ptype_7pqmagic_Sig);
+  Py_VISIT(traverse_module_state->__pyx_type_7pqmagic_Sig);
+  Py_VISIT(traverse_module_state->__pyx_ptype_7pqmagic_Kem);
+  Py_VISIT(traverse_module_state->__pyx_type_7pqmagic_Kem);
   Py_VISIT(traverse_module_state->__pyx_n_s_AIGIS_ENC_1);
   Py_VISIT(traverse_module_state->__pyx_n_s_AIGIS_ENC_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_AIGIS_ENC_3);
@@ -2927,15 +2927,15 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_s_Invalid_length);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Invalid_pk_length);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Invalid_sk_length);
-  Py_VISIT(traverse_module_state->__pyx_n_s_KEM);
-  Py_VISIT(traverse_module_state->__pyx_n_s_KEM___reduce_cython);
-  Py_VISIT(traverse_module_state->__pyx_n_s_KEM___setstate_cython);
-  Py_VISIT(traverse_module_state->__pyx_n_s_KEM_decaps);
-  Py_VISIT(traverse_module_state->__pyx_n_s_KEM_encaps);
-  Py_VISIT(traverse_module_state->__pyx_n_s_KEM_keypair);
   Py_VISIT(traverse_module_state->__pyx_n_s_KYBER_1024);
   Py_VISIT(traverse_module_state->__pyx_n_s_KYBER_512);
   Py_VISIT(traverse_module_state->__pyx_n_s_KYBER_768);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Kem);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Kem___reduce_cython);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Kem___setstate_cython);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Kem_decaps);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Kem_encaps);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Kem_keypair);
   Py_VISIT(traverse_module_state->__pyx_n_s_ML_DSA_44);
   Py_VISIT(traverse_module_state->__pyx_n_s_ML_DSA_65);
   Py_VISIT(traverse_module_state->__pyx_n_s_ML_DSA_87);
@@ -2944,14 +2944,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_ML_KEM_768);
   Py_VISIT(traverse_module_state->__pyx_n_s_PQMAGIC_FAILURE);
   Py_VISIT(traverse_module_state->__pyx_n_s_PQMAGIC_SUCCESS);
-  Py_VISIT(traverse_module_state->__pyx_n_s_SIG);
-  Py_VISIT(traverse_module_state->__pyx_n_s_SIG___reduce_cython);
-  Py_VISIT(traverse_module_state->__pyx_n_s_SIG___setstate_cython);
-  Py_VISIT(traverse_module_state->__pyx_n_s_SIG_keypair);
-  Py_VISIT(traverse_module_state->__pyx_n_s_SIG_open);
-  Py_VISIT(traverse_module_state->__pyx_n_s_SIG_sign);
-  Py_VISIT(traverse_module_state->__pyx_n_s_SIG_sign_pack);
-  Py_VISIT(traverse_module_state->__pyx_n_s_SIG_verify);
   Py_VISIT(traverse_module_state->__pyx_n_s_SLH_DSA_SHA2_128f);
   Py_VISIT(traverse_module_state->__pyx_n_s_SLH_DSA_SHA2_128s);
   Py_VISIT(traverse_module_state->__pyx_n_s_SLH_DSA_SHA2_192f);
@@ -2980,6 +2972,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_SPHINCS_Alpha_SHAKE_256s);
   Py_VISIT(traverse_module_state->__pyx_n_s_SPHINCS_Alpha_SM3_128f);
   Py_VISIT(traverse_module_state->__pyx_n_s_SPHINCS_Alpha_SM3_128s);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Sig);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Sig___reduce_cython);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Sig___setstate_cython);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Sig_keypair);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Sig_open);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Sig_sign);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Sig_sign_pack);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Sig_verify);
   Py_VISIT(traverse_module_state->__pyx_n_s_TypeError);
   Py_VISIT(traverse_module_state->__pyx_n_s_ValueError);
   Py_VISIT(traverse_module_state->__pyx_kp_b__2);
@@ -3101,11 +3101,11 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #if CYTHON_USE_MODULE_STATE
 #endif
 #if CYTHON_USE_MODULE_STATE
-#define __pyx_type_7pqmagic_SIG __pyx_mstate_global->__pyx_type_7pqmagic_SIG
-#define __pyx_type_7pqmagic_KEM __pyx_mstate_global->__pyx_type_7pqmagic_KEM
+#define __pyx_type_7pqmagic_Sig __pyx_mstate_global->__pyx_type_7pqmagic_Sig
+#define __pyx_type_7pqmagic_Kem __pyx_mstate_global->__pyx_type_7pqmagic_Kem
 #endif
-#define __pyx_ptype_7pqmagic_SIG __pyx_mstate_global->__pyx_ptype_7pqmagic_SIG
-#define __pyx_ptype_7pqmagic_KEM __pyx_mstate_global->__pyx_ptype_7pqmagic_KEM
+#define __pyx_ptype_7pqmagic_Sig __pyx_mstate_global->__pyx_ptype_7pqmagic_Sig
+#define __pyx_ptype_7pqmagic_Kem __pyx_mstate_global->__pyx_ptype_7pqmagic_Kem
 #define __pyx_n_s_AIGIS_ENC_1 __pyx_mstate_global->__pyx_n_s_AIGIS_ENC_1
 #define __pyx_n_s_AIGIS_ENC_2 __pyx_mstate_global->__pyx_n_s_AIGIS_ENC_2
 #define __pyx_n_s_AIGIS_ENC_3 __pyx_mstate_global->__pyx_n_s_AIGIS_ENC_3
@@ -3122,15 +3122,15 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_s_Invalid_length __pyx_mstate_global->__pyx_kp_s_Invalid_length
 #define __pyx_kp_s_Invalid_pk_length __pyx_mstate_global->__pyx_kp_s_Invalid_pk_length
 #define __pyx_kp_s_Invalid_sk_length __pyx_mstate_global->__pyx_kp_s_Invalid_sk_length
-#define __pyx_n_s_KEM __pyx_mstate_global->__pyx_n_s_KEM
-#define __pyx_n_s_KEM___reduce_cython __pyx_mstate_global->__pyx_n_s_KEM___reduce_cython
-#define __pyx_n_s_KEM___setstate_cython __pyx_mstate_global->__pyx_n_s_KEM___setstate_cython
-#define __pyx_n_s_KEM_decaps __pyx_mstate_global->__pyx_n_s_KEM_decaps
-#define __pyx_n_s_KEM_encaps __pyx_mstate_global->__pyx_n_s_KEM_encaps
-#define __pyx_n_s_KEM_keypair __pyx_mstate_global->__pyx_n_s_KEM_keypair
 #define __pyx_n_s_KYBER_1024 __pyx_mstate_global->__pyx_n_s_KYBER_1024
 #define __pyx_n_s_KYBER_512 __pyx_mstate_global->__pyx_n_s_KYBER_512
 #define __pyx_n_s_KYBER_768 __pyx_mstate_global->__pyx_n_s_KYBER_768
+#define __pyx_n_s_Kem __pyx_mstate_global->__pyx_n_s_Kem
+#define __pyx_n_s_Kem___reduce_cython __pyx_mstate_global->__pyx_n_s_Kem___reduce_cython
+#define __pyx_n_s_Kem___setstate_cython __pyx_mstate_global->__pyx_n_s_Kem___setstate_cython
+#define __pyx_n_s_Kem_decaps __pyx_mstate_global->__pyx_n_s_Kem_decaps
+#define __pyx_n_s_Kem_encaps __pyx_mstate_global->__pyx_n_s_Kem_encaps
+#define __pyx_n_s_Kem_keypair __pyx_mstate_global->__pyx_n_s_Kem_keypair
 #define __pyx_n_s_ML_DSA_44 __pyx_mstate_global->__pyx_n_s_ML_DSA_44
 #define __pyx_n_s_ML_DSA_65 __pyx_mstate_global->__pyx_n_s_ML_DSA_65
 #define __pyx_n_s_ML_DSA_87 __pyx_mstate_global->__pyx_n_s_ML_DSA_87
@@ -3139,14 +3139,6 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_ML_KEM_768 __pyx_mstate_global->__pyx_n_s_ML_KEM_768
 #define __pyx_n_s_PQMAGIC_FAILURE __pyx_mstate_global->__pyx_n_s_PQMAGIC_FAILURE
 #define __pyx_n_s_PQMAGIC_SUCCESS __pyx_mstate_global->__pyx_n_s_PQMAGIC_SUCCESS
-#define __pyx_n_s_SIG __pyx_mstate_global->__pyx_n_s_SIG
-#define __pyx_n_s_SIG___reduce_cython __pyx_mstate_global->__pyx_n_s_SIG___reduce_cython
-#define __pyx_n_s_SIG___setstate_cython __pyx_mstate_global->__pyx_n_s_SIG___setstate_cython
-#define __pyx_n_s_SIG_keypair __pyx_mstate_global->__pyx_n_s_SIG_keypair
-#define __pyx_n_s_SIG_open __pyx_mstate_global->__pyx_n_s_SIG_open
-#define __pyx_n_s_SIG_sign __pyx_mstate_global->__pyx_n_s_SIG_sign
-#define __pyx_n_s_SIG_sign_pack __pyx_mstate_global->__pyx_n_s_SIG_sign_pack
-#define __pyx_n_s_SIG_verify __pyx_mstate_global->__pyx_n_s_SIG_verify
 #define __pyx_n_s_SLH_DSA_SHA2_128f __pyx_mstate_global->__pyx_n_s_SLH_DSA_SHA2_128f
 #define __pyx_n_s_SLH_DSA_SHA2_128s __pyx_mstate_global->__pyx_n_s_SLH_DSA_SHA2_128s
 #define __pyx_n_s_SLH_DSA_SHA2_192f __pyx_mstate_global->__pyx_n_s_SLH_DSA_SHA2_192f
@@ -3175,6 +3167,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_SPHINCS_Alpha_SHAKE_256s __pyx_mstate_global->__pyx_n_s_SPHINCS_Alpha_SHAKE_256s
 #define __pyx_n_s_SPHINCS_Alpha_SM3_128f __pyx_mstate_global->__pyx_n_s_SPHINCS_Alpha_SM3_128f
 #define __pyx_n_s_SPHINCS_Alpha_SM3_128s __pyx_mstate_global->__pyx_n_s_SPHINCS_Alpha_SM3_128s
+#define __pyx_n_s_Sig __pyx_mstate_global->__pyx_n_s_Sig
+#define __pyx_n_s_Sig___reduce_cython __pyx_mstate_global->__pyx_n_s_Sig___reduce_cython
+#define __pyx_n_s_Sig___setstate_cython __pyx_mstate_global->__pyx_n_s_Sig___setstate_cython
+#define __pyx_n_s_Sig_keypair __pyx_mstate_global->__pyx_n_s_Sig_keypair
+#define __pyx_n_s_Sig_open __pyx_mstate_global->__pyx_n_s_Sig_open
+#define __pyx_n_s_Sig_sign __pyx_mstate_global->__pyx_n_s_Sig_sign
+#define __pyx_n_s_Sig_sign_pack __pyx_mstate_global->__pyx_n_s_Sig_sign_pack
+#define __pyx_n_s_Sig_verify __pyx_mstate_global->__pyx_n_s_Sig_verify
 #define __pyx_n_s_TypeError __pyx_mstate_global->__pyx_n_s_TypeError
 #define __pyx_n_s_ValueError __pyx_mstate_global->__pyx_n_s_ValueError
 #define __pyx_kp_b__2 __pyx_mstate_global->__pyx_kp_b__2
@@ -3270,8 +3270,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
  */
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3SIG_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_7pqmagic_3SIG_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_7pqmagic_3Sig_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_7pqmagic_3Sig_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_name = 0;
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
@@ -3331,12 +3331,12 @@ static int __pyx_pw_7pqmagic_3SIG_1__cinit__(PyObject *__pyx_v_self, PyObject *_
       __Pyx_Arg_XDECREF_VARARGS(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.SIG.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_name), (&PyString_Type), 1, "name", 1))) __PYX_ERR(0, 126, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7pqmagic_3SIG___cinit__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), __pyx_v_name);
+  __pyx_r = __pyx_pf_7pqmagic_3Sig___cinit__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), __pyx_v_name);
 
   /* function exit code */
   goto __pyx_L0;
@@ -3353,7 +3353,7 @@ static int __pyx_pw_7pqmagic_3SIG_1__cinit__(PyObject *__pyx_v_self, PyObject *_
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3SIG___cinit__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_name) {
+static int __pyx_pf_7pqmagic_3Sig___cinit__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_name) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -4828,7 +4828,7 @@ static int __pyx_pf_7pqmagic_3SIG___cinit__(struct __pyx_obj_7pqmagic_SIG *__pyx
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("pqmagic.SIG.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -4844,15 +4844,15 @@ static int __pyx_pf_7pqmagic_3SIG___cinit__(struct __pyx_obj_7pqmagic_SIG *__pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_3keypair(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Sig_3keypair(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3SIG_3keypair = {"keypair", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_3keypair, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3SIG_3keypair(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Sig_3keypair = {"keypair", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_3keypair, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Sig_3keypair(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -4877,14 +4877,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("keypair", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "keypair", 0))) return NULL;
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_2keypair(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_2keypair(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_2keypair(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_2keypair(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -6017,7 +6017,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_2keypair(struct __pyx_obj_7pqmagic_SIG *
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pqmagic.SIG.keypair", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.keypair", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -6034,15 +6034,15 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_2keypair(struct __pyx_obj_7pqmagic_SIG *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_5sign(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Sig_5sign(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3SIG_5sign = {"sign", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_5sign, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3SIG_5sign(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Sig_5sign = {"sign", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_5sign, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Sig_5sign(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -6142,14 +6142,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.SIG.sign", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.sign", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_m), (&PyBytes_Type), 1, "m", 1))) __PYX_ERR(0, 363, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ctx), (&PyBytes_Type), 1, "ctx", 1))) __PYX_ERR(0, 363, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sk), (&PyBytes_Type), 1, "sk", 1))) __PYX_ERR(0, 363, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_4sign(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), __pyx_v_m, __pyx_v_ctx, __pyx_v_sk);
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_4sign(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), __pyx_v_m, __pyx_v_ctx, __pyx_v_sk);
 
   /* function exit code */
   goto __pyx_L0;
@@ -6166,7 +6166,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_4sign(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_sk) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_4sign(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_sk) {
   size_t __pyx_v_mlen;
   size_t __pyx_v_ctxlen;
   size_t __pyx_v_siglen;
@@ -7486,7 +7486,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_4sign(struct __pyx_obj_7pqmagic_SIG *__p
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("pqmagic.SIG.sign", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.sign", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_result);
@@ -7504,15 +7504,15 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_4sign(struct __pyx_obj_7pqmagic_SIG *__p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_7verify(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Sig_7verify(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3SIG_7verify = {"verify", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_7verify, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3SIG_7verify(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Sig_7verify = {"verify", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_7verify, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Sig_7verify(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -7627,7 +7627,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.SIG.verify", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.verify", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -7635,7 +7635,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_m), (&PyBytes_Type), 1, "m", 1))) __PYX_ERR(0, 464, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ctx), (&PyBytes_Type), 1, "ctx", 1))) __PYX_ERR(0, 464, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pk), (&PyBytes_Type), 1, "pk", 1))) __PYX_ERR(0, 464, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_6verify(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), __pyx_v_sig, __pyx_v_m, __pyx_v_ctx, __pyx_v_pk);
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_6verify(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), __pyx_v_sig, __pyx_v_m, __pyx_v_ctx, __pyx_v_pk);
 
   /* function exit code */
   goto __pyx_L0;
@@ -7652,7 +7652,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_6verify(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_sig, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_pk) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_6verify(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_sig, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_pk) {
   size_t __pyx_v_mlen;
   size_t __pyx_v_ctxlen;
   size_t __pyx_v_siglen;
@@ -7740,7 +7740,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_6verify(struct __pyx_obj_7pqmagic_SIG *_
  *             return PQMAGIC_FAILURE
  */
     /*except:*/ {
-      __Pyx_AddTraceback("pqmagic.SIG.verify", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pqmagic.Sig.verify", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_7, &__pyx_t_8) < 0) __PYX_ERR(0, 467, __pyx_L5_except_error)
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
@@ -8888,7 +8888,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_6verify(struct __pyx_obj_7pqmagic_SIG *_
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pqmagic.SIG.verify", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.verify", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -8905,15 +8905,15 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_6verify(struct __pyx_obj_7pqmagic_SIG *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_9sign_pack(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Sig_9sign_pack(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3SIG_9sign_pack = {"sign_pack", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_9sign_pack, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3SIG_9sign_pack(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Sig_9sign_pack = {"sign_pack", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_9sign_pack, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Sig_9sign_pack(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -9013,14 +9013,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.SIG.sign_pack", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.sign_pack", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_m), (&PyBytes_Type), 1, "m", 1))) __PYX_ERR(0, 565, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ctx), (&PyBytes_Type), 1, "ctx", 1))) __PYX_ERR(0, 565, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sk), (&PyBytes_Type), 1, "sk", 1))) __PYX_ERR(0, 565, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_8sign_pack(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), __pyx_v_m, __pyx_v_ctx, __pyx_v_sk);
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_8sign_pack(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), __pyx_v_m, __pyx_v_ctx, __pyx_v_sk);
 
   /* function exit code */
   goto __pyx_L0;
@@ -9037,7 +9037,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_8sign_pack(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_sk) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_8sign_pack(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_ctx, PyObject *__pyx_v_sk) {
   size_t __pyx_v_mlen;
   size_t __pyx_v_ctxlen;
   size_t __pyx_v_smlen;
@@ -10355,7 +10355,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_8sign_pack(struct __pyx_obj_7pqmagic_SIG
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pqmagic.SIG.sign_pack", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.sign_pack", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_result);
@@ -10373,15 +10373,15 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_8sign_pack(struct __pyx_obj_7pqmagic_SIG
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_11open(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Sig_11open(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3SIG_11open = {"open", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_11open, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3SIG_11open(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Sig_11open = {"open", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_11open, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Sig_11open(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -10496,7 +10496,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.SIG.open", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.open", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -10504,7 +10504,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sm), (&PyBytes_Type), 1, "sm", 1))) __PYX_ERR(0, 665, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ctx), (&PyBytes_Type), 1, "ctx", 1))) __PYX_ERR(0, 665, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pk), (&PyBytes_Type), 1, "pk", 1))) __PYX_ERR(0, 665, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_10open(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), __pyx_v_m, __pyx_v_sm, __pyx_v_ctx, __pyx_v_pk);
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_10open(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), __pyx_v_m, __pyx_v_sm, __pyx_v_ctx, __pyx_v_pk);
 
   /* function exit code */
   goto __pyx_L0;
@@ -10521,7 +10521,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_10open(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_sm, PyObject *__pyx_v_ctx, PyObject *__pyx_v_pk) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_10open(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_m, PyObject *__pyx_v_sm, PyObject *__pyx_v_ctx, PyObject *__pyx_v_pk) {
   size_t __pyx_v_mlen;
   size_t __pyx_v_ctxlen;
   size_t __pyx_v_smlen;
@@ -10648,7 +10648,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_10open(struct __pyx_obj_7pqmagic_SIG *__
  *             return PQMAGIC_FAILURE
  */
     /*except:*/ {
-      __Pyx_AddTraceback("pqmagic.SIG.open", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pqmagic.Sig.open", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_7, &__pyx_t_8) < 0) __PYX_ERR(0, 672, __pyx_L5_except_error)
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
@@ -11773,7 +11773,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_10open(struct __pyx_obj_7pqmagic_SIG *__
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pqmagic.SIG.open", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.open", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11790,19 +11790,19 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_10open(struct __pyx_obj_7pqmagic_SIG *__
  */
 
 /* Python wrapper */
-static void __pyx_pw_7pqmagic_3SIG_13__dealloc__(PyObject *__pyx_v_self); /*proto*/
-static void __pyx_pw_7pqmagic_3SIG_13__dealloc__(PyObject *__pyx_v_self) {
+static void __pyx_pw_7pqmagic_3Sig_13__dealloc__(PyObject *__pyx_v_self); /*proto*/
+static void __pyx_pw_7pqmagic_3Sig_13__dealloc__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_pf_7pqmagic_3SIG_12__dealloc__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self));
+  __pyx_pf_7pqmagic_3Sig_12__dealloc__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
 }
 
-static void __pyx_pf_7pqmagic_3SIG_12__dealloc__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self) {
+static void __pyx_pf_7pqmagic_3Sig_12__dealloc__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self) {
   int __pyx_t_1;
 
   /* "pqmagic.pyx":765
@@ -11848,7 +11848,7 @@ static void __pyx_pf_7pqmagic_3SIG_12__dealloc__(struct __pyx_obj_7pqmagic_SIG *
  *         if self.sk:
  *             free(self.sk)             # <<<<<<<<<<<<<<
  * 
- * cdef class KEM:
+ * cdef class Kem:
  */
     free(__pyx_v_self->sk);
 
@@ -11874,28 +11874,28 @@ static void __pyx_pf_7pqmagic_3SIG_12__dealloc__(struct __pyx_obj_7pqmagic_SIG *
 
 /* "pqmagic.pyx":119
  * 
- * cdef class SIG:
+ * cdef class Sig:
  *     cdef public sig_label label             # <<<<<<<<<<<<<<
  *     cdef unsigned char *pk
  *     cdef unsigned char *sk
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_5label_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7pqmagic_3SIG_5label_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7pqmagic_3Sig_5label_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7pqmagic_3Sig_5label_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_5label___get__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_5label___get__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_5label___get__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_5label___get__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11913,7 +11913,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_5label___get__(struct __pyx_obj_7pqmagic
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pqmagic.SIG.label.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.label.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11922,21 +11922,21 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_5label___get__(struct __pyx_obj_7pqmagic
 }
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3SIG_5label_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7pqmagic_3SIG_5label_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_7pqmagic_3Sig_5label_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7pqmagic_3Sig_5label_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_5label_2__set__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_5label_2__set__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3SIG_5label_2__set__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_7pqmagic_3Sig_5label_2__set__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   enum __pyx_t_7pqmagic_sig_label __pyx_t_1;
   int __pyx_lineno = 0;
@@ -11949,7 +11949,7 @@ static int __pyx_pf_7pqmagic_3SIG_5label_2__set__(struct __pyx_obj_7pqmagic_SIG 
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.SIG.label.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.label.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -11964,21 +11964,21 @@ static int __pyx_pf_7pqmagic_3SIG_5label_2__set__(struct __pyx_obj_7pqmagic_SIG 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_15public_key_size_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7pqmagic_3SIG_15public_key_size_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7pqmagic_3Sig_15public_key_size_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7pqmagic_3Sig_15public_key_size_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_15public_key_size___get__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_15public_key_size___get__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_15public_key_size___get__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_15public_key_size___get__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11996,7 +11996,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_15public_key_size___get__(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pqmagic.SIG.public_key_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.public_key_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -12005,21 +12005,21 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_15public_key_size___get__(struct __pyx_o
 }
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3SIG_15public_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7pqmagic_3SIG_15public_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_7pqmagic_3Sig_15public_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7pqmagic_3Sig_15public_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_15public_key_size_2__set__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_15public_key_size_2__set__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3SIG_15public_key_size_2__set__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_7pqmagic_3Sig_15public_key_size_2__set__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   size_t __pyx_t_1;
   int __pyx_lineno = 0;
@@ -12032,7 +12032,7 @@ static int __pyx_pf_7pqmagic_3SIG_15public_key_size_2__set__(struct __pyx_obj_7p
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.SIG.public_key_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.public_key_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -12047,21 +12047,21 @@ static int __pyx_pf_7pqmagic_3SIG_15public_key_size_2__set__(struct __pyx_obj_7p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_15secret_key_size_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7pqmagic_3SIG_15secret_key_size_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7pqmagic_3Sig_15secret_key_size_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7pqmagic_3Sig_15secret_key_size_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_15secret_key_size___get__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_15secret_key_size___get__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_15secret_key_size___get__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_15secret_key_size___get__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -12079,7 +12079,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_15secret_key_size___get__(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pqmagic.SIG.secret_key_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.secret_key_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -12088,21 +12088,21 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_15secret_key_size___get__(struct __pyx_o
 }
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3SIG_15secret_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7pqmagic_3SIG_15secret_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_7pqmagic_3Sig_15secret_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7pqmagic_3Sig_15secret_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_15secret_key_size_2__set__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_15secret_key_size_2__set__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3SIG_15secret_key_size_2__set__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_7pqmagic_3Sig_15secret_key_size_2__set__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   size_t __pyx_t_1;
   int __pyx_lineno = 0;
@@ -12115,7 +12115,7 @@ static int __pyx_pf_7pqmagic_3SIG_15secret_key_size_2__set__(struct __pyx_obj_7p
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.SIG.secret_key_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.secret_key_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -12130,21 +12130,21 @@ static int __pyx_pf_7pqmagic_3SIG_15secret_key_size_2__set__(struct __pyx_obj_7p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_14signature_size_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7pqmagic_3SIG_14signature_size_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7pqmagic_3Sig_14signature_size_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7pqmagic_3Sig_14signature_size_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_14signature_size___get__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_14signature_size___get__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_14signature_size___get__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_14signature_size___get__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -12162,7 +12162,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_14signature_size___get__(struct __pyx_ob
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pqmagic.SIG.signature_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.signature_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -12171,21 +12171,21 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_14signature_size___get__(struct __pyx_ob
 }
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3SIG_14signature_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7pqmagic_3SIG_14signature_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_7pqmagic_3Sig_14signature_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7pqmagic_3Sig_14signature_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_14signature_size_2__set__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_14signature_size_2__set__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3SIG_14signature_size_2__set__(struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_7pqmagic_3Sig_14signature_size_2__set__(struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   size_t __pyx_t_1;
   int __pyx_lineno = 0;
@@ -12198,7 +12198,7 @@ static int __pyx_pf_7pqmagic_3SIG_14signature_size_2__set__(struct __pyx_obj_7pq
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.SIG.signature_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.signature_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -12211,15 +12211,15 @@ static int __pyx_pf_7pqmagic_3SIG_14signature_size_2__set__(struct __pyx_obj_7pq
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_15__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Sig_15__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3SIG_15__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_15__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3SIG_15__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Sig_15__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_15__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Sig_15__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -12244,14 +12244,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_14__reduce_cython__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_14__reduce_cython__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_14__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_SIG *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_14__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_Sig *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -12276,7 +12276,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_14__reduce_cython__(CYTHON_UNUSED struct
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.SIG.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -12291,15 +12291,15 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_14__reduce_cython__(CYTHON_UNUSED struct
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3SIG_17__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Sig_17__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3SIG_17__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_17__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3SIG_17__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Sig_17__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_17__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Sig_17__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -12369,11 +12369,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.SIG.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7pqmagic_3SIG_16__setstate_cython__(((struct __pyx_obj_7pqmagic_SIG *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_7pqmagic_3Sig_16__setstate_cython__(((struct __pyx_obj_7pqmagic_Sig *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -12386,7 +12386,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3SIG_16__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_SIG *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_7pqmagic_3Sig_16__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_Sig *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -12411,7 +12411,7 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_16__setstate_cython__(CYTHON_UNUSED stru
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.SIG.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Sig.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -12427,8 +12427,8 @@ static PyObject *__pyx_pf_7pqmagic_3SIG_16__setstate_cython__(CYTHON_UNUSED stru
  */
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3KEM_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_7pqmagic_3KEM_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_7pqmagic_3Kem_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_7pqmagic_3Kem_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_name = 0;
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
@@ -12488,12 +12488,12 @@ static int __pyx_pw_7pqmagic_3KEM_1__cinit__(PyObject *__pyx_v_self, PyObject *_
       __Pyx_Arg_XDECREF_VARARGS(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.KEM.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_name), (&PyString_Type), 1, "name", 1))) __PYX_ERR(0, 779, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7pqmagic_3KEM___cinit__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self), __pyx_v_name);
+  __pyx_r = __pyx_pf_7pqmagic_3Kem___cinit__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self), __pyx_v_name);
 
   /* function exit code */
   goto __pyx_L0;
@@ -12510,7 +12510,7 @@ static int __pyx_pw_7pqmagic_3KEM_1__cinit__(PyObject *__pyx_v_self, PyObject *_
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3KEM___cinit__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_name) {
+static int __pyx_pf_7pqmagic_3Kem___cinit__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_name) {
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -13076,7 +13076,7 @@ static int __pyx_pf_7pqmagic_3KEM___cinit__(struct __pyx_obj_7pqmagic_KEM *__pyx
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("pqmagic.KEM.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
@@ -13092,15 +13092,15 @@ static int __pyx_pf_7pqmagic_3KEM___cinit__(struct __pyx_obj_7pqmagic_KEM *__pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_3keypair(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Kem_3keypair(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3KEM_3keypair = {"keypair", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_3keypair, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3KEM_3keypair(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Kem_3keypair = {"keypair", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_3keypair, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Kem_3keypair(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -13125,14 +13125,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("keypair", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "keypair", 0))) return NULL;
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_2keypair(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_2keypair(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_2keypair(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_2keypair(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
@@ -13482,7 +13482,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_2keypair(struct __pyx_obj_7pqmagic_KEM *
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("pqmagic.KEM.keypair", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.keypair", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -13499,15 +13499,15 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_2keypair(struct __pyx_obj_7pqmagic_KEM *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_5encaps(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Kem_5encaps(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3KEM_5encaps = {"encaps", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_5encaps, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3KEM_5encaps(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Kem_5encaps = {"encaps", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_5encaps, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Kem_5encaps(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -13580,12 +13580,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.KEM.encaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.encaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_pk), (&PyBytes_Type), 1, "pk", 1))) __PYX_ERR(0, 863, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_4encaps(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self), __pyx_v_pk);
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_4encaps(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self), __pyx_v_pk);
 
   /* function exit code */
   goto __pyx_L0;
@@ -13602,7 +13602,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_4encaps(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_pk) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_4encaps(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_pk) {
   unsigned char *__pyx_v_ss;
   unsigned char *__pyx_v_ct;
   unsigned char *__pyx_v_pk_ptr;
@@ -13613,6 +13613,8 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_4encaps(struct __pyx_obj_7pqmagic_KEM *_
   Py_ssize_t __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   unsigned char *__pyx_t_4;
+  PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -14008,7 +14010,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_4encaps(struct __pyx_obj_7pqmagic_KEM *_
  *         elif(self.label == AIGIS_ENC_4):
  *             assert pqmagic.pqmagic_aigis_enc_4_std_enc(ct, ss, pk_ptr) == 0             # <<<<<<<<<<<<<<
  * 
- *         result = ct[:self.ciphertext_size]
+ *         result = ct[:self.ciphertext_size], ss[:self.shared_secret_size]
  */
     #ifndef CYTHON_WITHOUT_ASSERTIONS
     if (unlikely(__pyx_assertions_enabled())) {
@@ -14036,18 +14038,28 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_4encaps(struct __pyx_obj_7pqmagic_KEM *_
   /* "pqmagic.pyx":897
  *             assert pqmagic.pqmagic_aigis_enc_4_std_enc(ct, ss, pk_ptr) == 0
  * 
- *         result = ct[:self.ciphertext_size]             # <<<<<<<<<<<<<<
+ *         result = ct[:self.ciphertext_size], ss[:self.shared_secret_size]             # <<<<<<<<<<<<<<
  *         free(ss)
  *         free(ct)
  */
   __pyx_t_3 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_ct) + 0, __pyx_v_self->ciphertext_size - 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 897, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_v_result = ((PyObject*)__pyx_t_3);
+  __pyx_t_5 = __Pyx_PyBytes_FromStringAndSize(((const char*)__pyx_v_ss) + 0, __pyx_v_self->shared_secret_size - 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 897, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 897, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __Pyx_GIVEREF(__pyx_t_3);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3)) __PYX_ERR(0, 897, __pyx_L1_error);
+  __Pyx_GIVEREF(__pyx_t_5);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_t_5)) __PYX_ERR(0, 897, __pyx_L1_error);
   __pyx_t_3 = 0;
+  __pyx_t_5 = 0;
+  __pyx_v_result = ((PyObject*)__pyx_t_6);
+  __pyx_t_6 = 0;
 
   /* "pqmagic.pyx":898
  * 
- *         result = ct[:self.ciphertext_size]
+ *         result = ct[:self.ciphertext_size], ss[:self.shared_secret_size]
  *         free(ss)             # <<<<<<<<<<<<<<
  *         free(ct)
  *         return result
@@ -14055,7 +14067,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_4encaps(struct __pyx_obj_7pqmagic_KEM *_
   free(__pyx_v_ss);
 
   /* "pqmagic.pyx":899
- *         result = ct[:self.ciphertext_size]
+ *         result = ct[:self.ciphertext_size], ss[:self.shared_secret_size]
  *         free(ss)
  *         free(ct)             # <<<<<<<<<<<<<<
  *         return result
@@ -14086,7 +14098,9 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_4encaps(struct __pyx_obj_7pqmagic_KEM *_
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("pqmagic.KEM.encaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_AddTraceback("pqmagic.Kem.encaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_result);
@@ -14104,15 +14118,15 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_4encaps(struct __pyx_obj_7pqmagic_KEM *_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_7decaps(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Kem_7decaps(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3KEM_7decaps = {"decaps", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_7decaps, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3KEM_7decaps(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Kem_7decaps = {"decaps", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_7decaps, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Kem_7decaps(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -14198,13 +14212,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.KEM.decaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.decaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_ct), (&PyBytes_Type), 1, "ct", 1))) __PYX_ERR(0, 903, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_sk), (&PyBytes_Type), 1, "sk", 1))) __PYX_ERR(0, 903, __pyx_L1_error)
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_6decaps(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self), __pyx_v_ct, __pyx_v_sk);
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_6decaps(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self), __pyx_v_ct, __pyx_v_sk);
 
   /* function exit code */
   goto __pyx_L0;
@@ -14221,7 +14235,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_6decaps(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_ct, PyObject *__pyx_v_sk) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_6decaps(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_ct, PyObject *__pyx_v_sk) {
   unsigned char *__pyx_v_ss;
   unsigned char *__pyx_v_ct_ptr;
   unsigned char *__pyx_v_sk_ptr;
@@ -14305,7 +14319,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_6decaps(struct __pyx_obj_7pqmagic_KEM *_
  *             return PQMAGIC_FAILURE
  */
     /*except:*/ {
-      __Pyx_AddTraceback("pqmagic.KEM.decaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("pqmagic.Kem.decaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_7, &__pyx_t_8) < 0) __PYX_ERR(0, 906, __pyx_L5_except_error)
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
@@ -14829,7 +14843,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_6decaps(struct __pyx_obj_7pqmagic_KEM *_
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_AddTraceback("pqmagic.KEM.decaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.decaps", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_result);
@@ -14847,19 +14861,19 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_6decaps(struct __pyx_obj_7pqmagic_KEM *_
  */
 
 /* Python wrapper */
-static void __pyx_pw_7pqmagic_3KEM_9__dealloc__(PyObject *__pyx_v_self); /*proto*/
-static void __pyx_pw_7pqmagic_3KEM_9__dealloc__(PyObject *__pyx_v_self) {
+static void __pyx_pw_7pqmagic_3Kem_9__dealloc__(PyObject *__pyx_v_self); /*proto*/
+static void __pyx_pw_7pqmagic_3Kem_9__dealloc__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_pf_7pqmagic_3KEM_8__dealloc__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self));
+  __pyx_pf_7pqmagic_3Kem_8__dealloc__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
 }
 
-static void __pyx_pf_7pqmagic_3KEM_8__dealloc__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self) {
+static void __pyx_pf_7pqmagic_3Kem_8__dealloc__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self) {
   int __pyx_t_1;
 
   /* "pqmagic.pyx":948
@@ -14927,28 +14941,28 @@ static void __pyx_pf_7pqmagic_3KEM_8__dealloc__(struct __pyx_obj_7pqmagic_KEM *_
 
 /* "pqmagic.pyx":771
  * 
- * cdef class KEM:
+ * cdef class Kem:
  *     cdef public kem_label label             # <<<<<<<<<<<<<<
  *     cdef unsigned char *pk
  *     cdef unsigned char *sk
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_5label_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7pqmagic_3KEM_5label_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7pqmagic_3Kem_5label_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7pqmagic_3Kem_5label_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_5label___get__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_5label___get__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_5label___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_5label___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -14966,7 +14980,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_5label___get__(struct __pyx_obj_7pqmagic
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pqmagic.KEM.label.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.label.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -14975,21 +14989,21 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_5label___get__(struct __pyx_obj_7pqmagic
 }
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3KEM_5label_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7pqmagic_3KEM_5label_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_7pqmagic_3Kem_5label_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7pqmagic_3Kem_5label_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_5label_2__set__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_5label_2__set__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3KEM_5label_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_7pqmagic_3Kem_5label_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   enum __pyx_t_7pqmagic_kem_label __pyx_t_1;
   int __pyx_lineno = 0;
@@ -15002,7 +15016,7 @@ static int __pyx_pf_7pqmagic_3KEM_5label_2__set__(struct __pyx_obj_7pqmagic_KEM 
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.KEM.label.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.label.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -15017,21 +15031,21 @@ static int __pyx_pf_7pqmagic_3KEM_5label_2__set__(struct __pyx_obj_7pqmagic_KEM 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_15public_key_size_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7pqmagic_3KEM_15public_key_size_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7pqmagic_3Kem_15public_key_size_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7pqmagic_3Kem_15public_key_size_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_15public_key_size___get__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_15public_key_size___get__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_15public_key_size___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_15public_key_size___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -15049,7 +15063,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_15public_key_size___get__(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pqmagic.KEM.public_key_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.public_key_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -15058,21 +15072,21 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_15public_key_size___get__(struct __pyx_o
 }
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3KEM_15public_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7pqmagic_3KEM_15public_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_7pqmagic_3Kem_15public_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7pqmagic_3Kem_15public_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_15public_key_size_2__set__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_15public_key_size_2__set__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3KEM_15public_key_size_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_7pqmagic_3Kem_15public_key_size_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   size_t __pyx_t_1;
   int __pyx_lineno = 0;
@@ -15085,7 +15099,7 @@ static int __pyx_pf_7pqmagic_3KEM_15public_key_size_2__set__(struct __pyx_obj_7p
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.KEM.public_key_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.public_key_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -15100,21 +15114,21 @@ static int __pyx_pf_7pqmagic_3KEM_15public_key_size_2__set__(struct __pyx_obj_7p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_15secret_key_size_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7pqmagic_3KEM_15secret_key_size_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7pqmagic_3Kem_15secret_key_size_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7pqmagic_3Kem_15secret_key_size_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_15secret_key_size___get__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_15secret_key_size___get__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_15secret_key_size___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_15secret_key_size___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -15132,7 +15146,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_15secret_key_size___get__(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pqmagic.KEM.secret_key_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.secret_key_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -15141,21 +15155,21 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_15secret_key_size___get__(struct __pyx_o
 }
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3KEM_15secret_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7pqmagic_3KEM_15secret_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_7pqmagic_3Kem_15secret_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7pqmagic_3Kem_15secret_key_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_15secret_key_size_2__set__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_15secret_key_size_2__set__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3KEM_15secret_key_size_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_7pqmagic_3Kem_15secret_key_size_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   size_t __pyx_t_1;
   int __pyx_lineno = 0;
@@ -15168,7 +15182,7 @@ static int __pyx_pf_7pqmagic_3KEM_15secret_key_size_2__set__(struct __pyx_obj_7p
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.KEM.secret_key_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.secret_key_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -15183,21 +15197,21 @@ static int __pyx_pf_7pqmagic_3KEM_15secret_key_size_2__set__(struct __pyx_obj_7p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_15ciphertext_size_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7pqmagic_3KEM_15ciphertext_size_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7pqmagic_3Kem_15ciphertext_size_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7pqmagic_3Kem_15ciphertext_size_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_15ciphertext_size___get__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_15ciphertext_size___get__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_15ciphertext_size___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_15ciphertext_size___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -15215,7 +15229,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_15ciphertext_size___get__(struct __pyx_o
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pqmagic.KEM.ciphertext_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.ciphertext_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -15224,21 +15238,21 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_15ciphertext_size___get__(struct __pyx_o
 }
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3KEM_15ciphertext_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7pqmagic_3KEM_15ciphertext_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_7pqmagic_3Kem_15ciphertext_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7pqmagic_3Kem_15ciphertext_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_15ciphertext_size_2__set__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_15ciphertext_size_2__set__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3KEM_15ciphertext_size_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_7pqmagic_3Kem_15ciphertext_size_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   size_t __pyx_t_1;
   int __pyx_lineno = 0;
@@ -15251,7 +15265,7 @@ static int __pyx_pf_7pqmagic_3KEM_15ciphertext_size_2__set__(struct __pyx_obj_7p
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.KEM.ciphertext_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.ciphertext_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -15266,21 +15280,21 @@ static int __pyx_pf_7pqmagic_3KEM_15ciphertext_size_2__set__(struct __pyx_obj_7p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_18shared_secret_size_1__get__(PyObject *__pyx_v_self); /*proto*/
-static PyObject *__pyx_pw_7pqmagic_3KEM_18shared_secret_size_1__get__(PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_7pqmagic_3Kem_18shared_secret_size_1__get__(PyObject *__pyx_v_self); /*proto*/
+static PyObject *__pyx_pw_7pqmagic_3Kem_18shared_secret_size_1__get__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__get__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_18shared_secret_size___get__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_18shared_secret_size___get__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_18shared_secret_size___get__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_18shared_secret_size___get__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -15298,7 +15312,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_18shared_secret_size___get__(struct __py
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("pqmagic.KEM.shared_secret_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.shared_secret_size.__get__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -15307,21 +15321,21 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_18shared_secret_size___get__(struct __py
 }
 
 /* Python wrapper */
-static int __pyx_pw_7pqmagic_3KEM_18shared_secret_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
-static int __pyx_pw_7pqmagic_3KEM_18shared_secret_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pw_7pqmagic_3Kem_18shared_secret_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value); /*proto*/
+static int __pyx_pw_7pqmagic_3Kem_18shared_secret_size_3__set__(PyObject *__pyx_v_self, PyObject *__pyx_v_value) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_18shared_secret_size_2__set__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self), ((PyObject *)__pyx_v_value));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_18shared_secret_size_2__set__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self), ((PyObject *)__pyx_v_value));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_7pqmagic_3KEM_18shared_secret_size_2__set__(struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, PyObject *__pyx_v_value) {
+static int __pyx_pf_7pqmagic_3Kem_18shared_secret_size_2__set__(struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, PyObject *__pyx_v_value) {
   int __pyx_r;
   size_t __pyx_t_1;
   int __pyx_lineno = 0;
@@ -15334,7 +15348,7 @@ static int __pyx_pf_7pqmagic_3KEM_18shared_secret_size_2__set__(struct __pyx_obj
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.KEM.shared_secret_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.shared_secret_size.__set__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   return __pyx_r;
@@ -15347,15 +15361,15 @@ static int __pyx_pf_7pqmagic_3KEM_18shared_secret_size_2__set__(struct __pyx_obj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_11__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Kem_11__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3KEM_11__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_11__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3KEM_11__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Kem_11__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_11__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Kem_11__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -15380,14 +15394,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_10__reduce_cython__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self));
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_10__reduce_cython__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_10__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_KEM *__pyx_v_self) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_10__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_Kem *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -15412,7 +15426,7 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_10__reduce_cython__(CYTHON_UNUSED struct
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.KEM.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -15427,15 +15441,15 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_10__reduce_cython__(CYTHON_UNUSED struct
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_7pqmagic_3KEM_13__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_7pqmagic_3Kem_13__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_7pqmagic_3KEM_13__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_13__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_7pqmagic_3KEM_13__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_7pqmagic_3Kem_13__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_13__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_7pqmagic_3Kem_13__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -15505,11 +15519,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("pqmagic.KEM.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_7pqmagic_3KEM_12__setstate_cython__(((struct __pyx_obj_7pqmagic_KEM *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_7pqmagic_3Kem_12__setstate_cython__(((struct __pyx_obj_7pqmagic_Kem *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -15522,7 +15536,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_7pqmagic_3KEM_12__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_KEM *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_7pqmagic_3Kem_12__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_7pqmagic_Kem *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -15547,14 +15561,14 @@ static PyObject *__pyx_pf_7pqmagic_3KEM_12__setstate_cython__(CYTHON_UNUSED stru
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("pqmagic.KEM.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("pqmagic.Kem.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_tp_new_7pqmagic_SIG(PyTypeObject *t, PyObject *a, PyObject *k) {
+static PyObject *__pyx_tp_new_7pqmagic_Sig(PyTypeObject *t, PyObject *a, PyObject *k) {
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -15567,17 +15581,17 @@ static PyObject *__pyx_tp_new_7pqmagic_SIG(PyTypeObject *t, PyObject *a, PyObjec
   }
   if (unlikely(!o)) return 0;
   #endif
-  if (unlikely(__pyx_pw_7pqmagic_3SIG_1__cinit__(o, a, k) < 0)) goto bad;
+  if (unlikely(__pyx_pw_7pqmagic_3Sig_1__cinit__(o, a, k) < 0)) goto bad;
   return o;
   bad:
   Py_DECREF(o); o = 0;
   return NULL;
 }
 
-static void __pyx_tp_dealloc_7pqmagic_SIG(PyObject *o) {
+static void __pyx_tp_dealloc_7pqmagic_Sig(PyObject *o) {
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && (!PyType_IS_GC(Py_TYPE(o)) || !__Pyx_PyObject_GC_IsFinalized(o))) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_7pqmagic_SIG) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_7pqmagic_Sig) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -15586,7 +15600,7 @@ static void __pyx_tp_dealloc_7pqmagic_SIG(PyObject *o) {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
     __Pyx_SET_REFCNT(o, Py_REFCNT(o) + 1);
-    __pyx_pw_7pqmagic_3SIG_13__dealloc__(o);
+    __pyx_pw_7pqmagic_3Sig_13__dealloc__(o);
     __Pyx_SET_REFCNT(o, Py_REFCNT(o) - 1);
     PyErr_Restore(etype, eval, etb);
   }
@@ -15600,13 +15614,13 @@ static void __pyx_tp_dealloc_7pqmagic_SIG(PyObject *o) {
   #endif
 }
 
-static PyObject *__pyx_getprop_7pqmagic_3SIG_label(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7pqmagic_3SIG_5label_1__get__(o);
+static PyObject *__pyx_getprop_7pqmagic_3Sig_label(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7pqmagic_3Sig_5label_1__get__(o);
 }
 
-static int __pyx_setprop_7pqmagic_3SIG_label(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_7pqmagic_3Sig_label(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7pqmagic_3SIG_5label_3__set__(o, v);
+    return __pyx_pw_7pqmagic_3Sig_5label_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -15614,13 +15628,13 @@ static int __pyx_setprop_7pqmagic_3SIG_label(PyObject *o, PyObject *v, CYTHON_UN
   }
 }
 
-static PyObject *__pyx_getprop_7pqmagic_3SIG_public_key_size(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7pqmagic_3SIG_15public_key_size_1__get__(o);
+static PyObject *__pyx_getprop_7pqmagic_3Sig_public_key_size(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7pqmagic_3Sig_15public_key_size_1__get__(o);
 }
 
-static int __pyx_setprop_7pqmagic_3SIG_public_key_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_7pqmagic_3Sig_public_key_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7pqmagic_3SIG_15public_key_size_3__set__(o, v);
+    return __pyx_pw_7pqmagic_3Sig_15public_key_size_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -15628,13 +15642,13 @@ static int __pyx_setprop_7pqmagic_3SIG_public_key_size(PyObject *o, PyObject *v,
   }
 }
 
-static PyObject *__pyx_getprop_7pqmagic_3SIG_secret_key_size(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7pqmagic_3SIG_15secret_key_size_1__get__(o);
+static PyObject *__pyx_getprop_7pqmagic_3Sig_secret_key_size(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7pqmagic_3Sig_15secret_key_size_1__get__(o);
 }
 
-static int __pyx_setprop_7pqmagic_3SIG_secret_key_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_7pqmagic_3Sig_secret_key_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7pqmagic_3SIG_15secret_key_size_3__set__(o, v);
+    return __pyx_pw_7pqmagic_3Sig_15secret_key_size_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -15642,13 +15656,13 @@ static int __pyx_setprop_7pqmagic_3SIG_secret_key_size(PyObject *o, PyObject *v,
   }
 }
 
-static PyObject *__pyx_getprop_7pqmagic_3SIG_signature_size(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7pqmagic_3SIG_14signature_size_1__get__(o);
+static PyObject *__pyx_getprop_7pqmagic_3Sig_signature_size(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7pqmagic_3Sig_14signature_size_1__get__(o);
 }
 
-static int __pyx_setprop_7pqmagic_3SIG_signature_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_7pqmagic_3Sig_signature_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7pqmagic_3SIG_14signature_size_3__set__(o, v);
+    return __pyx_pw_7pqmagic_3Sig_14signature_size_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -15656,47 +15670,47 @@ static int __pyx_setprop_7pqmagic_3SIG_signature_size(PyObject *o, PyObject *v, 
   }
 }
 
-static PyMethodDef __pyx_methods_7pqmagic_SIG[] = {
-  {"keypair", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_3keypair, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"sign", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_5sign, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"verify", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_7verify, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"sign_pack", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_9sign_pack, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"open", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_11open, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_15__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3SIG_17__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_7pqmagic_Sig[] = {
+  {"keypair", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_3keypair, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"sign", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_5sign, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"verify", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_7verify, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"sign_pack", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_9sign_pack, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"open", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_11open, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_15__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Sig_17__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_7pqmagic_SIG[] = {
-  {(char *)"label", __pyx_getprop_7pqmagic_3SIG_label, __pyx_setprop_7pqmagic_3SIG_label, (char *)0, 0},
-  {(char *)"public_key_size", __pyx_getprop_7pqmagic_3SIG_public_key_size, __pyx_setprop_7pqmagic_3SIG_public_key_size, (char *)0, 0},
-  {(char *)"secret_key_size", __pyx_getprop_7pqmagic_3SIG_secret_key_size, __pyx_setprop_7pqmagic_3SIG_secret_key_size, (char *)0, 0},
-  {(char *)"signature_size", __pyx_getprop_7pqmagic_3SIG_signature_size, __pyx_setprop_7pqmagic_3SIG_signature_size, (char *)0, 0},
+static struct PyGetSetDef __pyx_getsets_7pqmagic_Sig[] = {
+  {(char *)"label", __pyx_getprop_7pqmagic_3Sig_label, __pyx_setprop_7pqmagic_3Sig_label, (char *)0, 0},
+  {(char *)"public_key_size", __pyx_getprop_7pqmagic_3Sig_public_key_size, __pyx_setprop_7pqmagic_3Sig_public_key_size, (char *)0, 0},
+  {(char *)"secret_key_size", __pyx_getprop_7pqmagic_3Sig_secret_key_size, __pyx_setprop_7pqmagic_3Sig_secret_key_size, (char *)0, 0},
+  {(char *)"signature_size", __pyx_getprop_7pqmagic_3Sig_signature_size, __pyx_setprop_7pqmagic_3Sig_signature_size, (char *)0, 0},
   {0, 0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_7pqmagic_SIG_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_7pqmagic_SIG},
-  {Py_tp_methods, (void *)__pyx_methods_7pqmagic_SIG},
-  {Py_tp_getset, (void *)__pyx_getsets_7pqmagic_SIG},
-  {Py_tp_new, (void *)__pyx_tp_new_7pqmagic_SIG},
+static PyType_Slot __pyx_type_7pqmagic_Sig_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_7pqmagic_Sig},
+  {Py_tp_methods, (void *)__pyx_methods_7pqmagic_Sig},
+  {Py_tp_getset, (void *)__pyx_getsets_7pqmagic_Sig},
+  {Py_tp_new, (void *)__pyx_tp_new_7pqmagic_Sig},
   {0, 0},
 };
-static PyType_Spec __pyx_type_7pqmagic_SIG_spec = {
-  "pqmagic.SIG",
-  sizeof(struct __pyx_obj_7pqmagic_SIG),
+static PyType_Spec __pyx_type_7pqmagic_Sig_spec = {
+  "pqmagic.Sig",
+  sizeof(struct __pyx_obj_7pqmagic_Sig),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE,
-  __pyx_type_7pqmagic_SIG_slots,
+  __pyx_type_7pqmagic_Sig_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_7pqmagic_SIG = {
+static PyTypeObject __pyx_type_7pqmagic_Sig = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pqmagic.""SIG", /*tp_name*/
-  sizeof(struct __pyx_obj_7pqmagic_SIG), /*tp_basicsize*/
+  "pqmagic.""Sig", /*tp_name*/
+  sizeof(struct __pyx_obj_7pqmagic_Sig), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7pqmagic_SIG, /*tp_dealloc*/
+  __pyx_tp_dealloc_7pqmagic_Sig, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -15729,9 +15743,9 @@ static PyTypeObject __pyx_type_7pqmagic_SIG = {
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_7pqmagic_SIG, /*tp_methods*/
+  __pyx_methods_7pqmagic_Sig, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_7pqmagic_SIG, /*tp_getset*/
+  __pyx_getsets_7pqmagic_Sig, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
@@ -15741,7 +15755,7 @@ static PyTypeObject __pyx_type_7pqmagic_SIG = {
   #endif
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_7pqmagic_SIG, /*tp_new*/
+  __pyx_tp_new_7pqmagic_Sig, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -15776,7 +15790,7 @@ static PyTypeObject __pyx_type_7pqmagic_SIG = {
 };
 #endif
 
-static PyObject *__pyx_tp_new_7pqmagic_KEM(PyTypeObject *t, PyObject *a, PyObject *k) {
+static PyObject *__pyx_tp_new_7pqmagic_Kem(PyTypeObject *t, PyObject *a, PyObject *k) {
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -15789,17 +15803,17 @@ static PyObject *__pyx_tp_new_7pqmagic_KEM(PyTypeObject *t, PyObject *a, PyObjec
   }
   if (unlikely(!o)) return 0;
   #endif
-  if (unlikely(__pyx_pw_7pqmagic_3KEM_1__cinit__(o, a, k) < 0)) goto bad;
+  if (unlikely(__pyx_pw_7pqmagic_3Kem_1__cinit__(o, a, k) < 0)) goto bad;
   return o;
   bad:
   Py_DECREF(o); o = 0;
   return NULL;
 }
 
-static void __pyx_tp_dealloc_7pqmagic_KEM(PyObject *o) {
+static void __pyx_tp_dealloc_7pqmagic_Kem(PyObject *o) {
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && (!PyType_IS_GC(Py_TYPE(o)) || !__Pyx_PyObject_GC_IsFinalized(o))) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_7pqmagic_KEM) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_7pqmagic_Kem) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -15808,7 +15822,7 @@ static void __pyx_tp_dealloc_7pqmagic_KEM(PyObject *o) {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
     __Pyx_SET_REFCNT(o, Py_REFCNT(o) + 1);
-    __pyx_pw_7pqmagic_3KEM_9__dealloc__(o);
+    __pyx_pw_7pqmagic_3Kem_9__dealloc__(o);
     __Pyx_SET_REFCNT(o, Py_REFCNT(o) - 1);
     PyErr_Restore(etype, eval, etb);
   }
@@ -15822,13 +15836,13 @@ static void __pyx_tp_dealloc_7pqmagic_KEM(PyObject *o) {
   #endif
 }
 
-static PyObject *__pyx_getprop_7pqmagic_3KEM_label(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7pqmagic_3KEM_5label_1__get__(o);
+static PyObject *__pyx_getprop_7pqmagic_3Kem_label(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7pqmagic_3Kem_5label_1__get__(o);
 }
 
-static int __pyx_setprop_7pqmagic_3KEM_label(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_7pqmagic_3Kem_label(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7pqmagic_3KEM_5label_3__set__(o, v);
+    return __pyx_pw_7pqmagic_3Kem_5label_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -15836,13 +15850,13 @@ static int __pyx_setprop_7pqmagic_3KEM_label(PyObject *o, PyObject *v, CYTHON_UN
   }
 }
 
-static PyObject *__pyx_getprop_7pqmagic_3KEM_public_key_size(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7pqmagic_3KEM_15public_key_size_1__get__(o);
+static PyObject *__pyx_getprop_7pqmagic_3Kem_public_key_size(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7pqmagic_3Kem_15public_key_size_1__get__(o);
 }
 
-static int __pyx_setprop_7pqmagic_3KEM_public_key_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_7pqmagic_3Kem_public_key_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7pqmagic_3KEM_15public_key_size_3__set__(o, v);
+    return __pyx_pw_7pqmagic_3Kem_15public_key_size_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -15850,13 +15864,13 @@ static int __pyx_setprop_7pqmagic_3KEM_public_key_size(PyObject *o, PyObject *v,
   }
 }
 
-static PyObject *__pyx_getprop_7pqmagic_3KEM_secret_key_size(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7pqmagic_3KEM_15secret_key_size_1__get__(o);
+static PyObject *__pyx_getprop_7pqmagic_3Kem_secret_key_size(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7pqmagic_3Kem_15secret_key_size_1__get__(o);
 }
 
-static int __pyx_setprop_7pqmagic_3KEM_secret_key_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_7pqmagic_3Kem_secret_key_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7pqmagic_3KEM_15secret_key_size_3__set__(o, v);
+    return __pyx_pw_7pqmagic_3Kem_15secret_key_size_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -15864,13 +15878,13 @@ static int __pyx_setprop_7pqmagic_3KEM_secret_key_size(PyObject *o, PyObject *v,
   }
 }
 
-static PyObject *__pyx_getprop_7pqmagic_3KEM_ciphertext_size(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7pqmagic_3KEM_15ciphertext_size_1__get__(o);
+static PyObject *__pyx_getprop_7pqmagic_3Kem_ciphertext_size(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7pqmagic_3Kem_15ciphertext_size_1__get__(o);
 }
 
-static int __pyx_setprop_7pqmagic_3KEM_ciphertext_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_7pqmagic_3Kem_ciphertext_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7pqmagic_3KEM_15ciphertext_size_3__set__(o, v);
+    return __pyx_pw_7pqmagic_3Kem_15ciphertext_size_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -15878,13 +15892,13 @@ static int __pyx_setprop_7pqmagic_3KEM_ciphertext_size(PyObject *o, PyObject *v,
   }
 }
 
-static PyObject *__pyx_getprop_7pqmagic_3KEM_shared_secret_size(PyObject *o, CYTHON_UNUSED void *x) {
-  return __pyx_pw_7pqmagic_3KEM_18shared_secret_size_1__get__(o);
+static PyObject *__pyx_getprop_7pqmagic_3Kem_shared_secret_size(PyObject *o, CYTHON_UNUSED void *x) {
+  return __pyx_pw_7pqmagic_3Kem_18shared_secret_size_1__get__(o);
 }
 
-static int __pyx_setprop_7pqmagic_3KEM_shared_secret_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
+static int __pyx_setprop_7pqmagic_3Kem_shared_secret_size(PyObject *o, PyObject *v, CYTHON_UNUSED void *x) {
   if (v) {
-    return __pyx_pw_7pqmagic_3KEM_18shared_secret_size_3__set__(o, v);
+    return __pyx_pw_7pqmagic_3Kem_18shared_secret_size_3__set__(o, v);
   }
   else {
     PyErr_SetString(PyExc_NotImplementedError, "__del__");
@@ -15892,46 +15906,46 @@ static int __pyx_setprop_7pqmagic_3KEM_shared_secret_size(PyObject *o, PyObject 
   }
 }
 
-static PyMethodDef __pyx_methods_7pqmagic_KEM[] = {
-  {"keypair", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_3keypair, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"encaps", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_5encaps, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"decaps", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_7decaps, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_11__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3KEM_13__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_7pqmagic_Kem[] = {
+  {"keypair", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_3keypair, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"encaps", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_5encaps, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"decaps", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_7decaps, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_11__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_7pqmagic_3Kem_13__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 
-static struct PyGetSetDef __pyx_getsets_7pqmagic_KEM[] = {
-  {(char *)"label", __pyx_getprop_7pqmagic_3KEM_label, __pyx_setprop_7pqmagic_3KEM_label, (char *)0, 0},
-  {(char *)"public_key_size", __pyx_getprop_7pqmagic_3KEM_public_key_size, __pyx_setprop_7pqmagic_3KEM_public_key_size, (char *)0, 0},
-  {(char *)"secret_key_size", __pyx_getprop_7pqmagic_3KEM_secret_key_size, __pyx_setprop_7pqmagic_3KEM_secret_key_size, (char *)0, 0},
-  {(char *)"ciphertext_size", __pyx_getprop_7pqmagic_3KEM_ciphertext_size, __pyx_setprop_7pqmagic_3KEM_ciphertext_size, (char *)0, 0},
-  {(char *)"shared_secret_size", __pyx_getprop_7pqmagic_3KEM_shared_secret_size, __pyx_setprop_7pqmagic_3KEM_shared_secret_size, (char *)0, 0},
+static struct PyGetSetDef __pyx_getsets_7pqmagic_Kem[] = {
+  {(char *)"label", __pyx_getprop_7pqmagic_3Kem_label, __pyx_setprop_7pqmagic_3Kem_label, (char *)0, 0},
+  {(char *)"public_key_size", __pyx_getprop_7pqmagic_3Kem_public_key_size, __pyx_setprop_7pqmagic_3Kem_public_key_size, (char *)0, 0},
+  {(char *)"secret_key_size", __pyx_getprop_7pqmagic_3Kem_secret_key_size, __pyx_setprop_7pqmagic_3Kem_secret_key_size, (char *)0, 0},
+  {(char *)"ciphertext_size", __pyx_getprop_7pqmagic_3Kem_ciphertext_size, __pyx_setprop_7pqmagic_3Kem_ciphertext_size, (char *)0, 0},
+  {(char *)"shared_secret_size", __pyx_getprop_7pqmagic_3Kem_shared_secret_size, __pyx_setprop_7pqmagic_3Kem_shared_secret_size, (char *)0, 0},
   {0, 0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_7pqmagic_KEM_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_7pqmagic_KEM},
-  {Py_tp_methods, (void *)__pyx_methods_7pqmagic_KEM},
-  {Py_tp_getset, (void *)__pyx_getsets_7pqmagic_KEM},
-  {Py_tp_new, (void *)__pyx_tp_new_7pqmagic_KEM},
+static PyType_Slot __pyx_type_7pqmagic_Kem_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_7pqmagic_Kem},
+  {Py_tp_methods, (void *)__pyx_methods_7pqmagic_Kem},
+  {Py_tp_getset, (void *)__pyx_getsets_7pqmagic_Kem},
+  {Py_tp_new, (void *)__pyx_tp_new_7pqmagic_Kem},
   {0, 0},
 };
-static PyType_Spec __pyx_type_7pqmagic_KEM_spec = {
-  "pqmagic.KEM",
-  sizeof(struct __pyx_obj_7pqmagic_KEM),
+static PyType_Spec __pyx_type_7pqmagic_Kem_spec = {
+  "pqmagic.Kem",
+  sizeof(struct __pyx_obj_7pqmagic_Kem),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE,
-  __pyx_type_7pqmagic_KEM_slots,
+  __pyx_type_7pqmagic_Kem_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_7pqmagic_KEM = {
+static PyTypeObject __pyx_type_7pqmagic_Kem = {
   PyVarObject_HEAD_INIT(0, 0)
-  "pqmagic.""KEM", /*tp_name*/
-  sizeof(struct __pyx_obj_7pqmagic_KEM), /*tp_basicsize*/
+  "pqmagic.""Kem", /*tp_name*/
+  sizeof(struct __pyx_obj_7pqmagic_Kem), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_7pqmagic_KEM, /*tp_dealloc*/
+  __pyx_tp_dealloc_7pqmagic_Kem, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -15964,9 +15978,9 @@ static PyTypeObject __pyx_type_7pqmagic_KEM = {
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_7pqmagic_KEM, /*tp_methods*/
+  __pyx_methods_7pqmagic_Kem, /*tp_methods*/
   0, /*tp_members*/
-  __pyx_getsets_7pqmagic_KEM, /*tp_getset*/
+  __pyx_getsets_7pqmagic_Kem, /*tp_getset*/
   0, /*tp_base*/
   0, /*tp_dict*/
   0, /*tp_descr_get*/
@@ -15976,7 +15990,7 @@ static PyTypeObject __pyx_type_7pqmagic_KEM = {
   #endif
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_7pqmagic_KEM, /*tp_new*/
+  __pyx_tp_new_7pqmagic_Kem, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -16043,15 +16057,15 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_s_Invalid_length, __pyx_k_Invalid_length, sizeof(__pyx_k_Invalid_length), 0, 0, 1, 0},
     {&__pyx_kp_s_Invalid_pk_length, __pyx_k_Invalid_pk_length, sizeof(__pyx_k_Invalid_pk_length), 0, 0, 1, 0},
     {&__pyx_kp_s_Invalid_sk_length, __pyx_k_Invalid_sk_length, sizeof(__pyx_k_Invalid_sk_length), 0, 0, 1, 0},
-    {&__pyx_n_s_KEM, __pyx_k_KEM, sizeof(__pyx_k_KEM), 0, 0, 1, 1},
-    {&__pyx_n_s_KEM___reduce_cython, __pyx_k_KEM___reduce_cython, sizeof(__pyx_k_KEM___reduce_cython), 0, 0, 1, 1},
-    {&__pyx_n_s_KEM___setstate_cython, __pyx_k_KEM___setstate_cython, sizeof(__pyx_k_KEM___setstate_cython), 0, 0, 1, 1},
-    {&__pyx_n_s_KEM_decaps, __pyx_k_KEM_decaps, sizeof(__pyx_k_KEM_decaps), 0, 0, 1, 1},
-    {&__pyx_n_s_KEM_encaps, __pyx_k_KEM_encaps, sizeof(__pyx_k_KEM_encaps), 0, 0, 1, 1},
-    {&__pyx_n_s_KEM_keypair, __pyx_k_KEM_keypair, sizeof(__pyx_k_KEM_keypair), 0, 0, 1, 1},
     {&__pyx_n_s_KYBER_1024, __pyx_k_KYBER_1024, sizeof(__pyx_k_KYBER_1024), 0, 0, 1, 1},
     {&__pyx_n_s_KYBER_512, __pyx_k_KYBER_512, sizeof(__pyx_k_KYBER_512), 0, 0, 1, 1},
     {&__pyx_n_s_KYBER_768, __pyx_k_KYBER_768, sizeof(__pyx_k_KYBER_768), 0, 0, 1, 1},
+    {&__pyx_n_s_Kem, __pyx_k_Kem, sizeof(__pyx_k_Kem), 0, 0, 1, 1},
+    {&__pyx_n_s_Kem___reduce_cython, __pyx_k_Kem___reduce_cython, sizeof(__pyx_k_Kem___reduce_cython), 0, 0, 1, 1},
+    {&__pyx_n_s_Kem___setstate_cython, __pyx_k_Kem___setstate_cython, sizeof(__pyx_k_Kem___setstate_cython), 0, 0, 1, 1},
+    {&__pyx_n_s_Kem_decaps, __pyx_k_Kem_decaps, sizeof(__pyx_k_Kem_decaps), 0, 0, 1, 1},
+    {&__pyx_n_s_Kem_encaps, __pyx_k_Kem_encaps, sizeof(__pyx_k_Kem_encaps), 0, 0, 1, 1},
+    {&__pyx_n_s_Kem_keypair, __pyx_k_Kem_keypair, sizeof(__pyx_k_Kem_keypair), 0, 0, 1, 1},
     {&__pyx_n_s_ML_DSA_44, __pyx_k_ML_DSA_44, sizeof(__pyx_k_ML_DSA_44), 0, 0, 1, 1},
     {&__pyx_n_s_ML_DSA_65, __pyx_k_ML_DSA_65, sizeof(__pyx_k_ML_DSA_65), 0, 0, 1, 1},
     {&__pyx_n_s_ML_DSA_87, __pyx_k_ML_DSA_87, sizeof(__pyx_k_ML_DSA_87), 0, 0, 1, 1},
@@ -16060,14 +16074,6 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_ML_KEM_768, __pyx_k_ML_KEM_768, sizeof(__pyx_k_ML_KEM_768), 0, 0, 1, 1},
     {&__pyx_n_s_PQMAGIC_FAILURE, __pyx_k_PQMAGIC_FAILURE, sizeof(__pyx_k_PQMAGIC_FAILURE), 0, 0, 1, 1},
     {&__pyx_n_s_PQMAGIC_SUCCESS, __pyx_k_PQMAGIC_SUCCESS, sizeof(__pyx_k_PQMAGIC_SUCCESS), 0, 0, 1, 1},
-    {&__pyx_n_s_SIG, __pyx_k_SIG, sizeof(__pyx_k_SIG), 0, 0, 1, 1},
-    {&__pyx_n_s_SIG___reduce_cython, __pyx_k_SIG___reduce_cython, sizeof(__pyx_k_SIG___reduce_cython), 0, 0, 1, 1},
-    {&__pyx_n_s_SIG___setstate_cython, __pyx_k_SIG___setstate_cython, sizeof(__pyx_k_SIG___setstate_cython), 0, 0, 1, 1},
-    {&__pyx_n_s_SIG_keypair, __pyx_k_SIG_keypair, sizeof(__pyx_k_SIG_keypair), 0, 0, 1, 1},
-    {&__pyx_n_s_SIG_open, __pyx_k_SIG_open, sizeof(__pyx_k_SIG_open), 0, 0, 1, 1},
-    {&__pyx_n_s_SIG_sign, __pyx_k_SIG_sign, sizeof(__pyx_k_SIG_sign), 0, 0, 1, 1},
-    {&__pyx_n_s_SIG_sign_pack, __pyx_k_SIG_sign_pack, sizeof(__pyx_k_SIG_sign_pack), 0, 0, 1, 1},
-    {&__pyx_n_s_SIG_verify, __pyx_k_SIG_verify, sizeof(__pyx_k_SIG_verify), 0, 0, 1, 1},
     {&__pyx_n_s_SLH_DSA_SHA2_128f, __pyx_k_SLH_DSA_SHA2_128f, sizeof(__pyx_k_SLH_DSA_SHA2_128f), 0, 0, 1, 1},
     {&__pyx_n_s_SLH_DSA_SHA2_128s, __pyx_k_SLH_DSA_SHA2_128s, sizeof(__pyx_k_SLH_DSA_SHA2_128s), 0, 0, 1, 1},
     {&__pyx_n_s_SLH_DSA_SHA2_192f, __pyx_k_SLH_DSA_SHA2_192f, sizeof(__pyx_k_SLH_DSA_SHA2_192f), 0, 0, 1, 1},
@@ -16096,6 +16102,14 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_SPHINCS_Alpha_SHAKE_256s, __pyx_k_SPHINCS_Alpha_SHAKE_256s, sizeof(__pyx_k_SPHINCS_Alpha_SHAKE_256s), 0, 0, 1, 1},
     {&__pyx_n_s_SPHINCS_Alpha_SM3_128f, __pyx_k_SPHINCS_Alpha_SM3_128f, sizeof(__pyx_k_SPHINCS_Alpha_SM3_128f), 0, 0, 1, 1},
     {&__pyx_n_s_SPHINCS_Alpha_SM3_128s, __pyx_k_SPHINCS_Alpha_SM3_128s, sizeof(__pyx_k_SPHINCS_Alpha_SM3_128s), 0, 0, 1, 1},
+    {&__pyx_n_s_Sig, __pyx_k_Sig, sizeof(__pyx_k_Sig), 0, 0, 1, 1},
+    {&__pyx_n_s_Sig___reduce_cython, __pyx_k_Sig___reduce_cython, sizeof(__pyx_k_Sig___reduce_cython), 0, 0, 1, 1},
+    {&__pyx_n_s_Sig___setstate_cython, __pyx_k_Sig___setstate_cython, sizeof(__pyx_k_Sig___setstate_cython), 0, 0, 1, 1},
+    {&__pyx_n_s_Sig_keypair, __pyx_k_Sig_keypair, sizeof(__pyx_k_Sig_keypair), 0, 0, 1, 1},
+    {&__pyx_n_s_Sig_open, __pyx_k_Sig_open, sizeof(__pyx_k_Sig_open), 0, 0, 1, 1},
+    {&__pyx_n_s_Sig_sign, __pyx_k_Sig_sign, sizeof(__pyx_k_Sig_sign), 0, 0, 1, 1},
+    {&__pyx_n_s_Sig_sign_pack, __pyx_k_Sig_sign_pack, sizeof(__pyx_k_Sig_sign_pack), 0, 0, 1, 1},
+    {&__pyx_n_s_Sig_verify, __pyx_k_Sig_verify, sizeof(__pyx_k_Sig_verify), 0, 0, 1, 1},
     {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
     {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
     {&__pyx_kp_b__2, __pyx_k__2, sizeof(__pyx_k__2), 0, 0, 0, 0},
@@ -16429,50 +16443,50 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_7pqmagic_SIG = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_7pqmagic_SIG_spec, NULL); if (unlikely(!__pyx_ptype_7pqmagic_SIG)) __PYX_ERR(0, 118, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_7pqmagic_SIG_spec, __pyx_ptype_7pqmagic_SIG) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
+  __pyx_ptype_7pqmagic_Sig = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_7pqmagic_Sig_spec, NULL); if (unlikely(!__pyx_ptype_7pqmagic_Sig)) __PYX_ERR(0, 118, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_7pqmagic_Sig_spec, __pyx_ptype_7pqmagic_Sig) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
   #else
-  __pyx_ptype_7pqmagic_SIG = &__pyx_type_7pqmagic_SIG;
+  __pyx_ptype_7pqmagic_Sig = &__pyx_type_7pqmagic_Sig;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_7pqmagic_SIG) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_7pqmagic_Sig) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_7pqmagic_SIG->tp_print = 0;
+  __pyx_ptype_7pqmagic_Sig->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_7pqmagic_SIG->tp_dictoffset && __pyx_ptype_7pqmagic_SIG->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_7pqmagic_SIG->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_7pqmagic_Sig->tp_dictoffset && __pyx_ptype_7pqmagic_Sig->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_7pqmagic_Sig->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_SIG, (PyObject *) __pyx_ptype_7pqmagic_SIG) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Sig, (PyObject *) __pyx_ptype_7pqmagic_Sig) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_7pqmagic_SIG) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_7pqmagic_Sig) < 0) __PYX_ERR(0, 118, __pyx_L1_error)
   #endif
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_7pqmagic_KEM = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_7pqmagic_KEM_spec, NULL); if (unlikely(!__pyx_ptype_7pqmagic_KEM)) __PYX_ERR(0, 770, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_7pqmagic_KEM_spec, __pyx_ptype_7pqmagic_KEM) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
+  __pyx_ptype_7pqmagic_Kem = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_7pqmagic_Kem_spec, NULL); if (unlikely(!__pyx_ptype_7pqmagic_Kem)) __PYX_ERR(0, 770, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_7pqmagic_Kem_spec, __pyx_ptype_7pqmagic_Kem) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
   #else
-  __pyx_ptype_7pqmagic_KEM = &__pyx_type_7pqmagic_KEM;
+  __pyx_ptype_7pqmagic_Kem = &__pyx_type_7pqmagic_Kem;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_7pqmagic_KEM) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_7pqmagic_Kem) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_7pqmagic_KEM->tp_print = 0;
+  __pyx_ptype_7pqmagic_Kem->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_7pqmagic_KEM->tp_dictoffset && __pyx_ptype_7pqmagic_KEM->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_7pqmagic_KEM->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_7pqmagic_Kem->tp_dictoffset && __pyx_ptype_7pqmagic_Kem->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_7pqmagic_Kem->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_KEM, (PyObject *) __pyx_ptype_7pqmagic_KEM) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_Kem, (PyObject *) __pyx_ptype_7pqmagic_Kem) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_7pqmagic_KEM) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_7pqmagic_Kem) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
   #endif
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -17385,11 +17399,11 @@ if (!__Pyx_RefNanny) {
  *         if(self.label == ML_DSA_44):
  *             assert pqmagic.pqmagic_ml_dsa_44_std_keypair(self.pk, self.sk) == 0
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3SIG_3keypair, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_SIG_keypair, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__8)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Sig_3keypair, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Sig_keypair, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__8)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 283, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_SIG, __pyx_n_s_keypair, __pyx_t_2) < 0) __PYX_ERR(0, 283, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_Sig, __pyx_n_s_keypair, __pyx_t_2) < 0) __PYX_ERR(0, 283, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_7pqmagic_SIG);
+  PyType_Modified(__pyx_ptype_7pqmagic_Sig);
 
   /* "pqmagic.pyx":363
  *     # Could be performed with either the self.sk or the input sk parameter,
@@ -17398,12 +17412,12 @@ if (!__Pyx_RefNanny) {
  * 
  *         cdef size_t mlen = <size_t>len(m)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3SIG_5sign, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_SIG_sign, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__10)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Sig_5sign, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Sig_sign, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__10)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__11);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_SIG, __pyx_n_s_sign, __pyx_t_2) < 0) __PYX_ERR(0, 363, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_Sig, __pyx_n_s_sign, __pyx_t_2) < 0) __PYX_ERR(0, 363, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_7pqmagic_SIG);
+  PyType_Modified(__pyx_ptype_7pqmagic_Sig);
 
   /* "pqmagic.pyx":464
  *     # Could be performed with either the self.pk or the input pk parameter,
@@ -17412,12 +17426,12 @@ if (!__Pyx_RefNanny) {
  *         try:
  *             assert <size_t>len(sig) == self.signature_size
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3SIG_7verify, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_SIG_verify, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Sig_7verify, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Sig_verify, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__11);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_SIG, __pyx_n_s_verify, __pyx_t_2) < 0) __PYX_ERR(0, 464, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_Sig, __pyx_n_s_verify, __pyx_t_2) < 0) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_7pqmagic_SIG);
+  PyType_Modified(__pyx_ptype_7pqmagic_Sig);
 
   /* "pqmagic.pyx":565
  *     # Could be performed with either the self.sk or the input sk parameter,
@@ -17426,12 +17440,12 @@ if (!__Pyx_RefNanny) {
  *         cdef size_t mlen = <size_t>len(m)
  *         cdef size_t ctxlen = <size_t>len(ctx)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3SIG_9sign_pack, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_SIG_sign_pack, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 565, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Sig_9sign_pack, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Sig_sign_pack, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 565, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__11);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_SIG, __pyx_n_s_sign_pack, __pyx_t_2) < 0) __PYX_ERR(0, 565, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_Sig, __pyx_n_s_sign_pack, __pyx_t_2) < 0) __PYX_ERR(0, 565, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_7pqmagic_SIG);
+  PyType_Modified(__pyx_ptype_7pqmagic_Sig);
 
   /* "pqmagic.pyx":665
  *     # Could be performed with either the self.pk or the input pk parameter,
@@ -17440,19 +17454,19 @@ if (!__Pyx_RefNanny) {
  *         cdef size_t mlen = <size_t>len(m)
  *         cdef size_t ctxlen = <size_t>len(ctx)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3SIG_11open, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_SIG_open, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 665, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Sig_11open, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Sig_open, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 665, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__11);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_SIG, __pyx_n_s_open, __pyx_t_2) < 0) __PYX_ERR(0, 665, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_Sig, __pyx_n_s_open, __pyx_t_2) < 0) __PYX_ERR(0, 665, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_7pqmagic_SIG);
+  PyType_Modified(__pyx_ptype_7pqmagic_Sig);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  * def __setstate_cython__(self, __pyx_state):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3SIG_15__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_SIG___reduce_cython, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__18)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Sig_15__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Sig___reduce_cython, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__18)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17463,7 +17477,7 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3SIG_17__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_SIG___setstate_cython, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Sig_17__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Sig___setstate_cython, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17475,11 +17489,11 @@ if (!__Pyx_RefNanny) {
  *         if(self.label == ML_KEM_512):
  *             assert pqmagic.pqmagic_ml_kem_512_std_keypair(self.pk, self.sk) == 0
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3KEM_3keypair, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_KEM_keypair, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 838, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Kem_3keypair, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Kem_keypair, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 838, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_KEM, __pyx_n_s_keypair, __pyx_t_2) < 0) __PYX_ERR(0, 838, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_Kem, __pyx_n_s_keypair, __pyx_t_2) < 0) __PYX_ERR(0, 838, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_7pqmagic_KEM);
+  PyType_Modified(__pyx_ptype_7pqmagic_Kem);
 
   /* "pqmagic.pyx":863
  * 
@@ -17488,12 +17502,12 @@ if (!__Pyx_RefNanny) {
  *         cdef unsigned char *ss = <unsigned char *>malloc(self.shared_secret_size)
  *         cdef unsigned char *ct = <unsigned char *>malloc(self.ciphertext_size)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3KEM_5encaps, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_KEM_encaps, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 863, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Kem_5encaps, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Kem_encaps, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 863, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__24);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_KEM, __pyx_n_s_encaps, __pyx_t_2) < 0) __PYX_ERR(0, 863, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_Kem, __pyx_n_s_encaps, __pyx_t_2) < 0) __PYX_ERR(0, 863, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_7pqmagic_KEM);
+  PyType_Modified(__pyx_ptype_7pqmagic_Kem);
 
   /* "pqmagic.pyx":903
  * 
@@ -17502,19 +17516,19 @@ if (!__Pyx_RefNanny) {
  *         try:
  *             assert <size_t>len(ct) == self.ciphertext_size
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3KEM_7decaps, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_KEM_decaps, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 903, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Kem_7decaps, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Kem_decaps, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 903, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_tuple__24);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_KEM, __pyx_n_s_decaps, __pyx_t_2) < 0) __PYX_ERR(0, 903, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_7pqmagic_Kem, __pyx_n_s_decaps, __pyx_t_2) < 0) __PYX_ERR(0, 903, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_7pqmagic_KEM);
+  PyType_Modified(__pyx_ptype_7pqmagic_Kem);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  * def __setstate_cython__(self, __pyx_state):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3KEM_11__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_KEM___reduce_cython, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Kem_11__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Kem___reduce_cython, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -17525,7 +17539,7 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3KEM_13__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_KEM___setstate_cython, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 3, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_7pqmagic_3Kem_13__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_Kem___setstate_cython, NULL, __pyx_n_s_pqmagic, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(1, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;

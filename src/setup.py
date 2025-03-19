@@ -13,7 +13,7 @@ extensions = [
 
 setup(
     name='pqmagic',
-    # version='0.1.0',
+    version='1.0.0',
     description='The python bindings for PQMagic https://github.com/pqcrypto-cn/PQMagic',
     ext_modules=cythonize(extensions),
     # zip_safe=False,

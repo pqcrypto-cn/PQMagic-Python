@@ -1,5 +1,5 @@
 import unittest
-from pqmagic import SIG, PQMAGIC_SUCCESS, PQMAGIC_FAILURE
+from pqmagic import Sig, PQMAGIC_SUCCESS, PQMAGIC_FAILURE
 
 class TestSIG(unittest.TestCase):
     def setUp(self):
@@ -34,14 +34,14 @@ class TestSIG(unittest.TestCase):
     def test_sign_verify(self):
         for alg in self.sig_algorithms1:
             with self.subTest(algorithm = alg):
-                sig = SIG(alg)
+                sig = Sig(alg)
                 pk, sk = sig.keypair()
                 signature = sig.sign(self.message, sk)
                 result = sig.verify(signature, self.message, pk)
                 self.assertEqual(result, PQMAGIC_SUCCESS)
         for alg in self.sig_algorithms2:
             with self.subTest(algorithm = alg):
-                sig = SIG(alg)
+                sig = Sig(alg)
                 pk, sk = sig.keypair()
                 signature = sig.sign(self.message, self.context, sk)
                 result = sig.verify(signature, self.message, self.context, pk)
@@ -50,14 +50,14 @@ class TestSIG(unittest.TestCase):
     def test_sign_pack_open(self):
         for alg in self.sig_algorithms1:
             with self.subTest(algorithm = alg):
-                sig = SIG(alg)
+                sig = Sig(alg)
                 pk, sk = sig.keypair()
                 signed_message = sig.sign_pack(self.message, sk)
                 result = sig.open(self.message, signed_message, pk)
                 self.assertEqual(result, PQMAGIC_SUCCESS)
         for alg in self.sig_algorithms2:
             with self.subTest(algorithm = alg):
-                sig = SIG(alg)
+                sig = Sig(alg)
                 pk, sk = sig.keypair()
                 signed_message = sig.sign_pack(self.message, self.context, sk)
                 result = sig.open(self.message, signed_message, self.context, pk)

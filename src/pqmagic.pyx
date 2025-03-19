@@ -115,7 +115,7 @@ PQMAGIC_SUCCESS = 0
 PQMAGIC_FAILURE = -1
 
 
-cdef class SIG:
+cdef class Sig:
     cdef public sig_label label
     cdef unsigned char *pk
     cdef unsigned char *sk
@@ -767,7 +767,7 @@ cdef class SIG:
         if self.sk:
             free(self.sk)
 
-cdef class KEM:
+cdef class Kem:
     cdef public kem_label label
     cdef unsigned char *pk
     cdef unsigned char *sk

@@ -3,7 +3,7 @@
 # either its attached key-pair, or the ones temprarily entered by the user.
 
 from binascii import hexlify
-from pqmagic import SIG, PQMAGIC_SUCCESS
+from pqmagic import Sig, PQMAGIC_SUCCESS
 
 def example_sig(): # Example of Signature Scheme
 
@@ -11,7 +11,7 @@ def example_sig(): # Example of Signature Scheme
     context = b"Test context."
 
     # taking ML_DSA_44 as an example
-    sig = SIG("ML_DSA_44")
+    sig = Sig("ML_DSA_44")
 
     # generate key pair (or update the object's attached key pair)
     pk, sk = sig.keypair()
@@ -19,14 +19,14 @@ def example_sig(): # Example of Signature Scheme
     print("Secret Key:", hexlify(sk))
 
     # sign message
-    signature = sig.sign(message, context) 
-    # or sig.sign(message, context, sk), but note that the key should be 
+    signature = sig.sign(message, context, sk) 
+    # or sig.sign(message, context), but note that the key should be 
     # explicitly provided if the context is empty: sign(m, pk = b'xxxx')
     print("Signature:", hexlify(signature))
 
     # verify signature
-    result = sig.verify(signature, message, context)
-    # or sig.verify(signature, message, context, pk), but note that the key 
+    result = sig.verify(signature, message, context, pk)
+    # or sig.verify(signature, message, context), but note that the key 
     # should be explicitly provided if the context is empty: verify(sig, m, pk = b'xxxx')
     if result == PQMAGIC_SUCCESS:
         print("Signature verification succeeded.")
@@ -34,14 +34,14 @@ def example_sig(): # Example of Signature Scheme
         print("Signature verification failed.")
 
     # sign and pack message
-    signed_message = sig.sign_pack(message, context)
-    # or sig.sign_pack(message, context, sk), but note that the key 
+    signed_message = sig.sign_pack(message, context, sk)
+    # or sig.sign_pack(message, context), but note that the key 
     # should be explicitly provided if the context is empty: sign_pack(m, pk = b'xxxx')
     print("Signed Message:", hexlify(signed_message))
 
     # open and verify signed message
-    result = sig.open(message, signed_message, context)
-    # or sig.open(message, signed_message, context, pk), but note that 
+    result = sig.open(message, signed_message, context, pk)
+    # or sig.open(message, signed_message, context), but note that 
     # the key should be provided if the context is empty: open(m, sm, pk = b'xxxx')
     if result == PQMAGIC_SUCCESS:
         print("Signed message verification succeeded.")
