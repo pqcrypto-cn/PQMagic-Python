@@ -1,6 +1,6 @@
 # pqmagic.pyx
 
-cimport pqmagic
+cimport src.pqmagic as pqmagic
 from libc.stdlib cimport malloc, free
 from libc.string cimport memcpy
 from libc.stdint cimport uint8_t
@@ -357,6 +357,84 @@ cdef class Sig:
             assert pqmagic.pqmagic_sphincs_a_sm3_128s_simple_std_sign_keypair(self.pk, self.sk) == 0
         
         return self.pk[:self.public_key_size], self.sk[:self.secret_key_size]
+
+    def keypair_internal(self, bytes keypair_coins):
+        if(self.label == ML_DSA_44):
+            assert pqmagic.pqmagic_ml_dsa_44_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == ML_DSA_65):
+            assert pqmagic.pqmagic_ml_dsa_65_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == ML_DSA_87):
+            assert pqmagic.pqmagic_ml_dsa_87_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == DILITHIUM_2):
+            assert pqmagic.pqmagic_dilithium2_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == DILITHIUM_3):
+            assert pqmagic.pqmagic_dilithium3_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == DILITHIUM_5):
+            assert pqmagic.pqmagic_dilithium5_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == AIGIS_SIG_1):
+            assert pqmagic.pqmagic_aigis_sig1_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == AIGIS_SIG_2):
+            assert pqmagic.pqmagic_aigis_sig2_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == AIGIS_SIG_3):
+            assert pqmagic.pqmagic_aigis_sig3_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == SLH_DSA_SHA2_128f):
+            assert pqmagic.pqmagic_slh_dsa_sha2_128f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHA2_128s):
+            assert pqmagic.pqmagic_slh_dsa_sha2_128s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHA2_192f):
+            assert pqmagic.pqmagic_slh_dsa_sha2_192f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHA2_192s):
+            assert pqmagic.pqmagic_slh_dsa_sha2_192s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHA2_256f):
+            assert pqmagic.pqmagic_slh_dsa_sha2_256f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHA2_256s):
+            assert pqmagic.pqmagic_slh_dsa_sha2_256s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHAKE_128f):
+            assert pqmagic.pqmagic_slh_dsa_shake_128f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHAKE_128s):
+            assert pqmagic.pqmagic_slh_dsa_shake_128s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHAKE_192f):
+            assert pqmagic.pqmagic_slh_dsa_shake_192f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHAKE_192s):
+            assert pqmagic.pqmagic_slh_dsa_shake_192s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHAKE_256f):
+            assert pqmagic.pqmagic_slh_dsa_shake_256f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SHAKE_256s):
+            assert pqmagic.pqmagic_slh_dsa_shake_256s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SM3_128f):
+            assert pqmagic.pqmagic_slh_dsa_sm3_128f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SLH_DSA_SM3_128s):
+            assert pqmagic.pqmagic_slh_dsa_sm3_128s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_128f):
+            assert pqmagic.pqmagic_sphincs_a_sha2_128f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_128s):
+            assert pqmagic.pqmagic_sphincs_a_sha2_128s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_192f):
+            assert pqmagic.pqmagic_sphincs_a_sha2_192f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_192s):
+            assert pqmagic.pqmagic_sphincs_a_sha2_192s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_256f):
+            assert pqmagic.pqmagic_sphincs_a_sha2_256f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_256s):
+            assert pqmagic.pqmagic_sphincs_a_sha2_256s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_128f):
+            assert pqmagic.pqmagic_sphincs_a_shake_128f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_128s):
+            assert pqmagic.pqmagic_sphincs_a_shake_128s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_192f):
+            assert pqmagic.pqmagic_sphincs_a_shake_192f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_192s):
+            assert pqmagic.pqmagic_sphincs_a_shake_192s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_256f):
+            assert pqmagic.pqmagic_sphincs_a_shake_256f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_256s):
+            assert pqmagic.pqmagic_sphincs_a_shake_256s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SM3_128f):
+            assert pqmagic.pqmagic_sphincs_a_sm3_128f_simple_std_sign_keypair(self.pk, self.sk) == 0
+        elif(self.label == SPHINCS_Alpha_SM3_128s):
+            assert pqmagic.pqmagic_sphincs_a_sm3_128s_simple_std_sign_keypair(self.pk, self.sk) == 0
+        
+        return self.pk[:self.public_key_size], self.sk[:self.secret_key_size]
     
     # Could be performed with either the self.sk or the input sk parameter,
     # but please enter the sk explicitly when ctx is null but sk is not: sign(m, sk = b'xxxx').
@@ -425,6 +503,104 @@ cdef class Sig:
             assert pqmagic.pqmagic_dilithium3_std_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
         elif(self.label == DILITHIUM_5):
             assert pqmagic.pqmagic_dilithium5_std_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_128f):
+            assert pqmagic.pqmagic_sphincs_a_sha2_128f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_128s):
+            assert pqmagic.pqmagic_sphincs_a_sha2_128s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_192f):
+            assert pqmagic.pqmagic_sphincs_a_sha2_192f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_192s):
+            assert pqmagic.pqmagic_sphincs_a_sha2_192s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_256f):
+            assert pqmagic.pqmagic_sphincs_a_sha2_256f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHA2_256s):
+            assert pqmagic.pqmagic_sphincs_a_sha2_256s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_128f):
+            assert pqmagic.pqmagic_sphincs_a_shake_128f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_128s):
+            assert pqmagic.pqmagic_sphincs_a_shake_128s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_192f):
+            assert pqmagic.pqmagic_sphincs_a_shake_192f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_192s):
+            assert pqmagic.pqmagic_sphincs_a_shake_192s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_256f):
+            assert pqmagic.pqmagic_sphincs_a_shake_256f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SHAKE_256s):
+            assert pqmagic.pqmagic_sphincs_a_shake_256s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SM3_128f):
+            assert pqmagic.pqmagic_sphincs_a_sm3_128f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SPHINCS_Alpha_SM3_128s):
+            assert pqmagic.pqmagic_sphincs_a_sm3_128s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        
+        result = sig[:siglen]
+        free(sig)
+        return result  
+
+    # Could be performed with either the self.sk or the input sk parameter,
+    # but please enter the sk explicitly sk is null but sign_coins is not: sign(m, sign_coins = b'xxxx').
+    def sign_internal(self, bytes m, bytes sk = b'', bytes sign_coins = b''):
+
+        cdef size_t mlen = <size_t>len(m)
+        cdef size_t siglen = self.signature_size
+        
+        cdef unsigned char *sig = <unsigned char *>malloc(siglen)
+        cdef unsigned char *m_ptr = <unsigned char *>m
+        cdef unsigned char *sk_ptr
+
+        if(sk):
+            if(<size_t>len(sk) != self.secret_key_size):
+                print("Invalid sk length!")
+                return PQMAGIC_FAILURE 
+            sk_ptr = <unsigned char *>sk
+        else:
+            sk_ptr = self.sk
+
+        if(self.label == ML_DSA_44):
+            assert pqmagic.pqmagic_ml_dsa_44_std_signature_internal(sig, &siglen, m_ptr, mlen, sign_coins, sk_ptr) == 0
+        elif(self.label == ML_DSA_65):
+            assert pqmagic.pqmagic_ml_dsa_65_std_signature_internal(sig, &siglen, m_ptr, mlen, sign_coins, sk_ptr) == 0
+        elif(self.label == ML_DSA_87):
+            assert pqmagic.pqmagic_ml_dsa_87_std_signature_internal(sig, &siglen, m_ptr, mlen, sign_coins, sk_ptr) == 0
+        elif(self.label == DILITHIUM_2):
+            assert pqmagic.pqmagic_dilithium2_std_signature_internal(sig, &siglen, m_ptr, mlen, sign_coins, sk_ptr) == 0
+        elif(self.label == DILITHIUM_3):
+            assert pqmagic.pqmagic_dilithium3_std_signature_internal(sig, &siglen, m_ptr, mlen, sign_coins, sk_ptr) == 0
+        elif(self.label == DILITHIUM_5):
+            assert pqmagic.pqmagic_dilithium5_std_signature_internal(sig, &siglen, m_ptr, mlen, sign_coins, sk_ptr) == 0
+        elif(self.label == AIGIS_SIG_1):
+            assert pqmagic.pqmagic_aigis_sig1_std_signature_internal(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == AIGIS_SIG_2):
+            assert pqmagic.pqmagic_aigis_sig2_std_signature_internal(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == AIGIS_SIG_3):
+            assert pqmagic.pqmagic_aigis_sig3_std_signature_internal(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHA2_128f):
+            assert pqmagic.pqmagic_slh_dsa_sha2_128f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHA2_128s):
+            assert pqmagic.pqmagic_slh_dsa_sha2_128s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHA2_192f):
+            assert pqmagic.pqmagic_slh_dsa_sha2_192f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHA2_192s):
+            assert pqmagic.pqmagic_slh_dsa_sha2_192s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHA2_256f):
+            assert pqmagic.pqmagic_slh_dsa_sha2_256f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHA2_256s):
+            assert pqmagic.pqmagic_slh_dsa_sha2_256s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHAKE_128f):
+            assert pqmagic.pqmagic_slh_dsa_shake_128f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHAKE_128s):
+            assert pqmagic.pqmagic_slh_dsa_shake_128s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHAKE_192f):
+            assert pqmagic.pqmagic_slh_dsa_shake_192f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHAKE_192s):
+            assert pqmagic.pqmagic_slh_dsa_shake_192s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHAKE_256f):
+            assert pqmagic.pqmagic_slh_dsa_shake_256f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SHAKE_256s):
+            assert pqmagic.pqmagic_slh_dsa_shake_256s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SM3_128f):
+            assert pqmagic.pqmagic_slh_dsa_sm3_128f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
+        elif(self.label == SLH_DSA_SM3_128s):
+            assert pqmagic.pqmagic_slh_dsa_sm3_128s_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
         elif(self.label == SPHINCS_Alpha_SHA2_128f):
             assert pqmagic.pqmagic_sphincs_a_sha2_128f_simple_std_sign_signature(sig, &siglen, m_ptr, mlen, sk_ptr) == 0
         elif(self.label == SPHINCS_Alpha_SHA2_128s):
@@ -531,6 +707,106 @@ cdef class Sig:
             return pqmagic.pqmagic_dilithium3_std_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
         elif(self.label == DILITHIUM_5):
             return pqmagic.pqmagic_dilithium5_std_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHA2_128f):
+            return pqmagic.pqmagic_sphincs_a_sha2_128f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHA2_128s):
+            return pqmagic.pqmagic_sphincs_a_sha2_128s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHA2_192f):
+            return pqmagic.pqmagic_sphincs_a_sha2_192f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHA2_192s):
+            return pqmagic.pqmagic_sphincs_a_sha2_192s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHA2_256f):
+            return pqmagic.pqmagic_sphincs_a_sha2_256f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHA2_256s):
+            return pqmagic.pqmagic_sphincs_a_sha2_256s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHAKE_128f):
+            return pqmagic.pqmagic_sphincs_a_shake_128f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHAKE_128s):
+            return pqmagic.pqmagic_sphincs_a_shake_128s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHAKE_192f):
+            return pqmagic.pqmagic_sphincs_a_shake_192f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHAKE_192s):
+            return pqmagic.pqmagic_sphincs_a_shake_192s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHAKE_256f):
+            return pqmagic.pqmagic_sphincs_a_shake_256f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SHAKE_256s):
+            return pqmagic.pqmagic_sphincs_a_shake_256s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SM3_128f):
+            return pqmagic.pqmagic_sphincs_a_sm3_128f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SPHINCS_Alpha_SM3_128s):
+            return pqmagic.pqmagic_sphincs_a_sm3_128s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+
+    # return 0 if verification success, or return error code (neg number).
+    # Could be performed with either the self.pk or the input pk parameter,
+    # but please enter the pk explicitly when ctx is null but pk is not: verify(sig, m, pk = b'xxxx').
+    def verify_internal(self, bytes sig, bytes m, bytes pk = b''):
+        try:
+            assert <size_t>len(sig) == self.signature_size
+        except:
+            print('Invalid length!')
+            return PQMAGIC_FAILURE
+        
+        cdef size_t mlen = <size_t>len(m)
+        cdef size_t siglen = self.signature_size
+
+        cdef unsigned char *m_ptr = <unsigned char *>m
+        cdef unsigned char *sig_ptr = <unsigned char *>sig
+        cdef unsigned char *pk_ptr
+
+        if(pk):
+            if(<size_t>len(pk) != self.public_key_size):
+                print("Invalid pk length!")
+                return PQMAGIC_FAILURE
+            pk_ptr = <unsigned char *>pk
+        else:
+            pk_ptr = self.pk
+
+        if(self.label == ML_DSA_44):
+            return pqmagic.pqmagic_ml_dsa_44_std_verify_internal(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == ML_DSA_65):
+            return pqmagic.pqmagic_ml_dsa_65_std_verify_internal(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == ML_DSA_87):
+            return pqmagic.pqmagic_ml_dsa_87_std_verify_internal(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == DILITHIUM_2):
+            return pqmagic.pqmagic_dilithium2_std_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == DILITHIUM_3):
+            return pqmagic.pqmagic_dilithium3_std_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == DILITHIUM_5):
+            return pqmagic.pqmagic_dilithium5_std_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == AIGIS_SIG_1):
+            return pqmagic.pqmagic_aigis_sig1_std_verify_internal(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == AIGIS_SIG_2):
+            return pqmagic.pqmagic_aigis_sig2_std_verify_internal(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == AIGIS_SIG_3):
+            return pqmagic.pqmagic_aigis_sig3_std_verify_internal(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHA2_128f):
+            return pqmagic.pqmagic_slh_dsa_sha2_128f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHA2_128s):
+            return pqmagic.pqmagic_slh_dsa_sha2_128s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHA2_192f):
+            return pqmagic.pqmagic_slh_dsa_sha2_192f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHA2_192s):
+            return pqmagic.pqmagic_slh_dsa_sha2_192s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHA2_256f):
+            return pqmagic.pqmagic_slh_dsa_sha2_256f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHA2_256s):
+            return pqmagic.pqmagic_slh_dsa_sha2_256s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHAKE_128f):
+            return pqmagic.pqmagic_slh_dsa_shake_128f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHAKE_128s):
+            return pqmagic.pqmagic_slh_dsa_shake_128s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHAKE_192f):
+            return pqmagic.pqmagic_slh_dsa_shake_192f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHAKE_192s):
+            return pqmagic.pqmagic_slh_dsa_shake_192s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHAKE_256f):
+            return pqmagic.pqmagic_slh_dsa_shake_256f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SHAKE_256s):
+            return pqmagic.pqmagic_slh_dsa_shake_256s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SM3_128f):
+            return pqmagic.pqmagic_slh_dsa_sm3_128f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+        elif(self.label == SLH_DSA_SM3_128s):
+            return pqmagic.pqmagic_slh_dsa_sm3_128s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
         elif(self.label == SPHINCS_Alpha_SHA2_128f):
             return pqmagic.pqmagic_sphincs_a_sha2_128f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
         elif(self.label == SPHINCS_Alpha_SHA2_128s):
@@ -859,6 +1135,30 @@ cdef class Kem:
 
         return self.pk[:self.public_key_size], self.sk[:self.secret_key_size]
     
+    def keypair_internal(self, bytes keypair_coins):
+        if(self.label == ML_KEM_512):
+            assert pqmagic.pqmagic_ml_kem_512_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == ML_KEM_768):
+            assert pqmagic.pqmagic_ml_kem_768_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == ML_KEM_1024):
+            assert pqmagic.pqmagic_ml_kem_1024_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == KYBER_512):
+            assert pqmagic.pqmagic_kyber512_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == KYBER_768):
+            assert pqmagic.pqmagic_kyber768_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == KYBER_1024):
+            assert pqmagic.pqmagic_kyber1024_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == AIGIS_ENC_1):
+            assert pqmagic.pqmagic_aigis_enc_1_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == AIGIS_ENC_2):
+            assert pqmagic.pqmagic_aigis_enc_2_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == AIGIS_ENC_3):
+            assert pqmagic.pqmagic_aigis_enc_3_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+        elif(self.label == AIGIS_ENC_4):
+            assert pqmagic.pqmagic_aigis_enc_4_std_keypair_internal(self.pk, self.sk, keypair_coins) == 0
+
+        return self.pk[:self.public_key_size], self.sk[:self.secret_key_size]
+    
     # Could be performed with either the self.pk or the input pk parameter.
     def encaps(self, bytes pk = b''):
         cdef unsigned char *ss = <unsigned char *>malloc(self.shared_secret_size)
@@ -867,7 +1167,7 @@ cdef class Kem:
 
         if(pk):
             if(<size_t>len(pk) != self.public_key_size):
-                print("Invalid pk length!")
+                print(f"{self.label}: Invalid pk length! Supposed: {self.public_key_size}, input: {len(pk)}")
                 return PQMAGIC_FAILURE
             pk_ptr = <unsigned char *>pk
         else:
@@ -893,6 +1193,46 @@ cdef class Kem:
             assert pqmagic.pqmagic_aigis_enc_3_std_enc(ct, ss, pk_ptr) == 0
         elif(self.label == AIGIS_ENC_4):
             assert pqmagic.pqmagic_aigis_enc_4_std_enc(ct, ss, pk_ptr) == 0
+        
+        result = ct[:self.ciphertext_size], ss[:self.shared_secret_size]
+        free(ss)
+        free(ct)
+        return result
+
+    # Could be performed with either the self.pk or the input pk parameter.
+    def encaps_internal(self, bytes kem_enc_coins, bytes pk = b''):
+        cdef unsigned char *ss = <unsigned char *>malloc(self.shared_secret_size)
+        cdef unsigned char *ct = <unsigned char *>malloc(self.ciphertext_size)
+        cdef unsigned char *pk_ptr
+
+        if(pk):
+            if(<size_t>len(pk) != self.public_key_size):
+                print(f"{self.label}: Invalid pk length! Supposed: {self.public_key_size}, input: {len(pk)}")
+                return PQMAGIC_FAILURE
+            pk_ptr = <unsigned char *>pk
+        else:
+            pk_ptr = self.pk
+        
+        if(self.label == ML_KEM_512):
+            assert pqmagic.pqmagic_ml_kem_512_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
+        elif(self.label == ML_KEM_768):
+            assert pqmagic.pqmagic_ml_kem_768_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
+        elif(self.label == ML_KEM_1024):
+            assert pqmagic.pqmagic_ml_kem_1024_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
+        elif(self.label == KYBER_512):
+            assert pqmagic.pqmagic_kyber512_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
+        elif(self.label == KYBER_768):
+            assert pqmagic.pqmagic_kyber768_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
+        elif(self.label == KYBER_1024):
+            assert pqmagic.pqmagic_kyber1024_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
+        elif(self.label == AIGIS_ENC_1):
+            assert pqmagic.pqmagic_aigis_enc_1_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
+        elif(self.label == AIGIS_ENC_2):
+            assert pqmagic.pqmagic_aigis_enc_2_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
+        elif(self.label == AIGIS_ENC_3):
+            assert pqmagic.pqmagic_aigis_enc_3_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
+        elif(self.label == AIGIS_ENC_4):
+            assert pqmagic.pqmagic_aigis_enc_4_std_enc_internal(ct, ss, pk_ptr, kem_enc_coins) == 0
         
         result = ct[:self.ciphertext_size], ss[:self.shared_secret_size]
         free(ss)

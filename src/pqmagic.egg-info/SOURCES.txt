@@ -1,6 +1,0 @@
-pqmagic.c
-setup.py
-pqmagic.egg-info/PKG-INFO
-pqmagic.egg-info/SOURCES.txt
-pqmagic.egg-info/dependency_links.txt
-pqmagic.egg-info/top_level.txt

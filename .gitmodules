@@ -1,0 +1,3 @@
+[submodule "src/PQMagic"]
+	path = src/PQMagic
+	url = https://github.com/pqcrypto-cn/PQMagic
