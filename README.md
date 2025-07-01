@@ -21,3 +21,8 @@ python tests/pqmagic_test_vec.py  # Run test using test vecs for kems and sigs.
 ```
 
 ## Run examples
+
+```python
+python examples/pqmagic_kem_examples.py # Run a kem example.
+python examples/pqmagic_sig_examples.py # Run a sig example.
+```
