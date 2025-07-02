@@ -24,9 +24,9 @@ pip install .
 ## Run tests
 
 ```python
-python tests/pqmagic_kem_tests.py # Run self test for kems.
-python tests/pqmagic_sig_tests.py # Run self test for sigs.
-python tests/pqmagic_test_vec.py  # Run test using test vecs for kems and sigs.
+python tests/pypqmagic_kem_tests.py # Run self test for kems.
+python tests/pypqmagic_sig_tests.py # Run self test for sigs.
+python tests/pypqmagic_test_vec.py  # Run test using test vecs for kems and sigs.
 ```
 
 ## Run examples
