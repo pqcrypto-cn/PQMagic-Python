@@ -1,10 +1,18 @@
 # PQMagic-Python
 The python bindings for PQMagic https://github.com/pqcrypto-cn/PQMagic .
 
+## Dependencies
+
+```bash
+sudo apt update
+sudo apt install build-essential  # install gcc, g++, make, libc-dev, etc.
+sudo apt install cmake
+pip install -r requirements.txt
+```
+
 ## Build from source
 
-```python
-pip install -r requirements.txt
+```bash
 python setup.py build_ext --inplace
 export LD_LIBRARY_PATH=./src/PQMagic/build/install/lib:$LD_LIBRARY_PATH
 pip install .
