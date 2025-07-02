@@ -13,6 +13,7 @@ pip install -r requirements.txt
 ## Build from source
 
 ```bash
+git clone --recurse-submodules https://github.com/pqcrypto-cn/PQMagic-Python.git
 python setup.py build_ext --inplace
 export LD_LIBRARY_PATH=./src/PQMagic/build/install/lib:$LD_LIBRARY_PATH
 pip install .
