@@ -1,6 +1,6 @@
 # PQMagic-python
 
-[PQMagic](https://pqcrypto.dev), maintained by Prof. [Yu Yu](http://www.yuyu.hk)'s team, is the first post-quantum cryptography algorithm library in China that supports FIPS standards. Here is its python bindings, `pqmagic`, based on the [C library](https://github.com/pqcrypto-cn/PQMagic). This project aims to help developers to use the high-performance PQC algorithms in python for more convenience and flexibility.
+ The python bindings for PQMagic https://github.com/pqcrypto-cn/PQMagic . [PQMagic](https://pqcrypto.dev/) (Post-Quantum Magic) is the first **high-performance post-quantum cryptographic algorithm library** that supports both the [FIPS 203 204 205](https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved) standards in China, and it supports the higher performance PQC algorithms designed by us: **Aigis-Enc、Aigis-Sig** ([PKC 2020]((https://eprint.iacr.org/2019/510))) and **SPHINCS-Alpha** ([CRYPTO 2023](https://eprint.iacr.org/2022/059)). PQMagic has implemented cryptographic modifications to the **Hash Function Components** of all algorithms, better aligning with Chinese standards while seamlessly integrating with international standards. This project aims to help developers use the high-performance PQC algorithms in python for more convenience and flexibility.
 
 ## Algorithms Support
 PQMagic-python supports the standard algorithms selected by NIST, as well as some self-developed algorithms. The current entirety is shown as follows.

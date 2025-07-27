@@ -739,7 +739,7 @@ cdef class Sig:
         elif(self.label == SPHINCS_Alpha_SM3_128f):
             return pqmagic.pqmagic_sphincs_a_sm3_128f_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr) == 0
         elif(self.label == SPHINCS_Alpha_SM3_128s):
-            return pqmagic.pqmagic_sphincs_a_sm3_128s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr)
+            return pqmagic.pqmagic_sphincs_a_sm3_128s_simple_std_sign_verify(sig_ptr, siglen, m_ptr, mlen, pk_ptr) == 0
 
     # return `True` if verification succeeds, or return `False`.
     # Could be performed with either the self.pk or the input pk parameter,
