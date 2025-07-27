@@ -1,7 +1,7 @@
 import unittest
 import os
 from binascii import unhexlify
-from pqmagic import Kem, Sig, PQMAGIC_SUCCESS, PQMAGIC_FAILURE
+from pqmagic import Kem, Sig
 
 class TestKEMVectors(unittest.TestCase):
     def setUp(self):
@@ -153,7 +153,7 @@ class TestSigVectors(unittest.TestCase):
                         
                         # Verify signature
                         result = sig.verify_internal(vec['sig'], mext, vec['pk'])
-                        self.assertEqual(result, PQMAGIC_SUCCESS, "Signature verification failed")
+                        self.assertEqual(result, True, "Signature verification failed")
                     
                     print(f"✅ {alg: <12} - All tests passed successfully")
                 except AssertionError as e:

@@ -1,5 +1,5 @@
 test_venv/
-src/pqmagic.c
+pqmagic/pqmagic.c
 *.so
 build/
 *.egg-info/

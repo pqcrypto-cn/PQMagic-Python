@@ -3,7 +3,7 @@
 # either its attached key-pair, or the ones temprarily entered by the user.
 
 from binascii import hexlify
-from pqmagic import Sig, PQMAGIC_SUCCESS
+from pqmagic import Sig
 
 def example_sig(): # Example of Signature Scheme
 
@@ -28,7 +28,7 @@ def example_sig(): # Example of Signature Scheme
     result = sig.verify(signature, message, context, pk)
     # or sig.verify(signature, message, context), but note that the key 
     # should be explicitly provided if the context is empty: verify(sig, m, pk = b'xxxx')
-    if result == PQMAGIC_SUCCESS:
+    if result == True: 
         print("Signature verification succeeded.")
     else:
         print("Signature verification failed.")
@@ -43,7 +43,7 @@ def example_sig(): # Example of Signature Scheme
     result = sig.open(message, signed_message, context, pk)
     # or sig.open(message, signed_message, context), but note that 
     # the key should be provided if the context is empty: open(m, sm, pk = b'xxxx')
-    if result == PQMAGIC_SUCCESS:
+    if result == True: 
         print("Signed message verification succeeded.")
     else:
         print("Signed message verification failed.")

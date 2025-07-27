@@ -1,6 +1,6 @@
 import unittest
 from binascii import hexlify
-from pqmagic import Kem, PQMAGIC_SUCCESS, PQMAGIC_FAILURE
+from pqmagic import Kem
 
 class TestKEM(unittest.TestCase):
     def setUp(self):

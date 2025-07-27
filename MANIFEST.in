@@ -1,0 +1,10 @@
+include pqmagic/__init__.py
+include pqmagic/pqmagic.pyx
+include pqmagic/pypqmagic.pxd
+include pqmagic/libpqmagic.so
+include pqmagic/libpqmagic.dylib
+include pqmagic/libpqmagic_std.so
+include pqmagic/libpqmagic_std.dylib
+include pqmagic/libpqmagic_std.dll
+recursive-include pqmagic *
+include README.md
