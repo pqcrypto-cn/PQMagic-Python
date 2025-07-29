@@ -50,21 +50,17 @@ class build_ext(build_ext_orig):
         
         if platform.startswith("linux") or platform == "darwin":
             cmake_cmd = ["cmake", "..", f"-DUSE_SHAKE=ON", f"-DCMAKE_INSTALL_PREFIX={install_dir}"]
-            make_cmd = ["make"]
             install_cmd = ["make", "install" , "-j"]
         elif platform == "win32":
             # Check for CMake and Ninja
             if self._has_command("mingw32-make"):
                 cmake_cmd = ["cmake", "..", "-G", "MinGW Makefiles", f"-DUSE_SHAKE=ON", f"-DCMAKE_INSTALL_PREFIX={install_dir}"]
-                make_cmd = ["mingw32-make"]
                 install_cmd = ["mingw32-make", "install", "-j"]
             #elif self._has_command("nmake"):
             #    cmake_cmd = ["cmake", "..", "-G", "NMake Makefiles", f"-DUSE_SHAKE=ON", f"-DCMAKE_INSTALL_PREFIX={install_dir}"]
-            #    make_cmd = ["nmake"]
             #    install_cmd = ["nmake", "install", "-j"]
             #elif self._has_command("ninja"):
             #    cmake_cmd = ["cmake", "..", "-G", "Ninja", f"-DUSE_SHAKE=ON", f"-DCMAKE_INSTALL_PREFIX={install_dir}"]
-            #    make_cmd = ["ninja"]
             #    install_cmd = ["ninja", "install", "-j"]
             else:
                 print("Error: Currently PQMagic-Python only supports gcc as the compiler. Please install 64-bit MinGW.")
@@ -75,7 +71,6 @@ class build_ext(build_ext_orig):
 
         try:
             subprocess.check_call(cmake_cmd, cwd=build_dir)
-            subprocess.check_call(make_cmd, cwd=build_dir)
             subprocess.check_call(install_cmd, cwd=build_dir)
 
         except FileNotFoundError as e:
@@ -128,7 +123,7 @@ extensions = [
 
 setup(
     name='pqmagic',
-    version='1.0.4',
+    version='1.0.5',
     install_requires=['Cython', 'wheel', 'setuptools'],
     homepage='https://pqcrypto.dev',
     description='The python bindings for PQMagic https://github.com/pqcrypto-cn/PQMagic',
