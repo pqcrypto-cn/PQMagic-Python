@@ -16,16 +16,13 @@ For SIG algorithms, it supports:
 
 ## Launch
 ### From PyPI
-For Windows, we have built several wheels (x64, python>=3.10). 
-```powershell
-pip install pqmagic
-```
-
-For Linux/MacOS, currently we only allow building from source distribution. So please first install cmake and build tools for source code compilation:
+For security's sake, currently we only allow building from source distribution. So please first install cmake and build tools for source code compilation:
 ```bash
 sudo apt install cmake build-essential # for Linux
 brew install cmake make # for MacOS
+choco install cmake mingw # for Windows
 ```
+For Windows, you can also manually install [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/latest/download).   
 Then install from pip:
 ```sh
 pip install -v pqmagic
