@@ -1,0 +1,54 @@
+name: Test Installation for PQMagic-Python
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [windows-2022, ubuntu-22.04, macos-latest]
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+      fail-fast: false
+
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+        architecture: ${{ matrix.architecture }}
+    
+    - name: Windows install build tools
+      shell: pwsh
+      if: matrix.os == 'windows-2022'
+      run: |
+        python -m pip install --upgrade pip
+        pip install setuptools wheel Cython
+        choco install cmake --yes --no-progress
+        choco install mingw --yes --no-progress
+        echo "C:\ProgramData\chocolatey\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
+        echo "C:\tools\mingw64\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
+    
+    - name: Linux install build tools
+      if: matrix.os == 'ubuntu-22.04'
+      run: |
+        sudo apt-get update && sudo apt-get install -y cmake build-essential
+      
+    - name: macOS install build tools
+      if: matrix.os == 'macos-latest'
+      run: brew install cmake make
+
+    - name: Install pqmagic
+      run: pip install -v pqmagic
+
+    - name: Test pqmagic-python
+      run: |
+        cd tests
+        python -c "import pqmagic; print(pqmagic.__version__)"
+        python -c "from pqmagic import Kem; from binascii import hexlify; kem = Kem('ML_KEM_512'); pk, sk = kem.keypair(); print(hexlify(pk).decode('utf-8')); print('\n'); print(hexlify(sk).decode('utf-8'))"
+        python pypqmagic_kem_tests.py
+        python pypqmagic_sig_tests.py
