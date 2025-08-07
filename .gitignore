@@ -3,3 +3,4 @@ pqmagic/pqmagic.c
 *.so
 build/
 *.egg-info/
+*.pyd

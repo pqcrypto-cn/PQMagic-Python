@@ -38,7 +38,7 @@ class build_ext(build_ext_orig):
 
     # Function to compile and install the PQMagic C library
     def compile_pqmagic(self):
-        platform = sys.platform         
+        # platform = sys.platform         
         build_dir = os.path.join("pqmagic", "PQMagic", "build")
         install_dir = os.path.abspath(os.path.join(build_dir, "install"))  # Custom install directory
         os.makedirs(build_dir, exist_ok=True)
@@ -48,22 +48,30 @@ class build_ext(build_ext_orig):
             sys.stderr.write("Error: CMake is required to build PQMagic. Please install it first.\n")
             sys.exit(1)
         
+        # Common CMake options
+        common_cmake_opts = [
+            "..",
+            "-DUSE_SHAKE=ON",
+            f"-DCMAKE_INSTALL_PREFIX={install_dir}",
+            "-DENABLE_TEST=OFF",
+            "-DENABLE_BENCH=OFF",
+            "-DCMAKE_C_COMPILER=gcc",
+            "-DCMAKE_CXX_COMPILER=g++"
+        ]
+
         if platform.startswith("linux") or platform == "darwin":
-            cmake_cmd = ["cmake", "..", f"-DUSE_SHAKE=ON", f"-DCMAKE_INSTALL_PREFIX={install_dir}"]
-            install_cmd = ["make", "install" , "-j"]
+            cmake_cmd = ["cmake"] + common_cmake_opts
+            install_cmd = ["make", "install", f"-j {os.cpu_count() - 2}"]
         elif platform == "win32":
             # Check for CMake and Ninja
-            if self._has_command("mingw32-make"):
-                cmake_cmd = ["cmake", "..", "-G", "MinGW Makefiles", f"-DUSE_SHAKE=ON", f"-DCMAKE_INSTALL_PREFIX={install_dir}"]
-                install_cmd = ["mingw32-make", "install", "-j"]
-            #elif self._has_command("nmake"):
-            #    cmake_cmd = ["cmake", "..", "-G", "NMake Makefiles", f"-DUSE_SHAKE=ON", f"-DCMAKE_INSTALL_PREFIX={install_dir}"]
-            #    install_cmd = ["nmake", "install", "-j"]
-            #elif self._has_command("ninja"):
-            #    cmake_cmd = ["cmake", "..", "-G", "Ninja", f"-DUSE_SHAKE=ON", f"-DCMAKE_INSTALL_PREFIX={install_dir}"]
-            #    install_cmd = ["ninja", "install", "-j"]
+            if self._has_command("ninja"):
+               cmake_cmd = ["cmake", "-G", "Ninja"] + common_cmake_opts
+               install_cmd = ["ninja", "install", f"-j {os.cpu_count() - 2}"]
+            elif self._has_command("mingw32-make"):
+                cmake_cmd = ["cmake", "-G", "MinGW Makefiles"] + common_cmake_opts
+                install_cmd = ["mingw32-make", "install", f"-j {os.cpu_count() - 2}"]
             else:
-                print("Error: Currently PQMagic-Python only supports gcc as the compiler. Please install 64-bit MinGW.")
+                print("Error: Currently PQMagic-Python only supports ninja and mingw32-make.")
                 sys.exit(1)
         else:
             print(f"Unsupported platform: {platform}")
