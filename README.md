@@ -22,7 +22,7 @@ sudo apt install cmake build-essential # for Linux
 brew install cmake make # for MacOS
 choco install cmake mingw # for Windows
 ```
-For Windows, you can also manually install [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/latest/download).   
+For Windows, you can also manually install [MinGW-w64](https://www.mingw-w64.org/downloads/#mingw-w64-builds).   
 Then install from pip:
 ```sh
 pip install -v pqmagic
