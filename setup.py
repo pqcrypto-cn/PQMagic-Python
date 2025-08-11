@@ -58,18 +58,21 @@ class build_ext(build_ext_orig):
             "-DCMAKE_C_COMPILER=gcc",
             "-DCMAKE_CXX_COMPILER=g++"
         ]
+        
+        # Reserve 2 cores for system stability
+        core_num = max(2, os.cpu_count() - 2)  
 
         if platform.startswith("linux") or platform == "darwin":
             cmake_cmd = ["cmake"] + common_cmake_opts
-            install_cmd = ["make", "install", f"-j {os.cpu_count() - 2}"]
+            install_cmd = ["make", "install", "-j", f"{core_num}"]
         elif platform == "win32":
             # Check for CMake and Ninja
             if self._has_command("ninja"):
                cmake_cmd = ["cmake", "-G", "Ninja"] + common_cmake_opts
-               install_cmd = ["ninja", "install", f"-j {os.cpu_count() - 2}"]
+               install_cmd = ["ninja", "install", "-j", f"{core_num}"]
             elif self._has_command("mingw32-make"):
                 cmake_cmd = ["cmake", "-G", "MinGW Makefiles"] + common_cmake_opts
-                install_cmd = ["mingw32-make", "install", f"-j {os.cpu_count() - 2}"]
+                install_cmd = ["mingw32-make", "install", "-j", f"{core_num}"]
             else:
                 print("Error: Currently PQMagic-Python only supports ninja and mingw32-make.")
                 sys.exit(1)
@@ -131,7 +134,7 @@ extensions = [
 
 setup(
     name='pqmagic',
-    version='1.0.5',
+    version='1.0.7',
     install_requires=['Cython', 'wheel', 'setuptools'],
     homepage='https://pqcrypto.dev',
     description='The python bindings for PQMagic https://github.com/pqcrypto-cn/PQMagic',
